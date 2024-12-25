@@ -1,0 +1,223 @@
+*{
+    margin:0px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0px;
+    height: 40px;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    position: fixed;
+    background: linear-gradient(to right, #79bbee, #9fcdf0);
+    background-color: #79bbee;
+    color: white;
+}
+header h1{
+    width: 100%;
+    margin-left: 30%;
+}
+header ul{
+    width: 100%;
+    margin-right: 10%;
+}
+header ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 20px;
+    font-weight: 600;
+}
+header ul li a{
+    transition: 1s;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: large;
+    color: white;
+}
+header ul li a:hover{
+    font-size: 20px;
+    text-decoration: underline;
+    color: #103c5d;
+}
+body{
+    background: linear-gradient(to right, #add9fb, #cce7fb);
+}
+.space{
+    padding: 3%;
+}
+#about{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0;
+}
+#about img{
+    width: 400px;
+    height: 450px;
+    border-radius: 50%;
+    border: 3px solid #9fd2f9;
+    padding: 3px;
+    margin-top: 70px;
+    margin-left: -15%;
+}
+#about .aboutpara{
+    margin-top: 70px;
+    width: 40%;
+    margin-right: 15%;
+    text-align: justify;
+}
+#about .aboutpara h2{
+    color: #1266a7;
+}
+#about .aboutpara p{
+    font-size: larger;
+    line-height: 2.5;
+}
+#about button{
+    margin-top: 5%;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color:  #67ace1;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+}
+#skills{
+    margin-left: 7%;
+}
+#skillsSpace{
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+}
+#skillsSpace div{
+    margin-left: -5%;
+}
+#skills div{
+    padding: 20px;
+}
+#skills h2{
+    color: #1266a7;
+}
+#skills h3{
+    color: #1266a7;
+}
+#skills ul{
+    list-style-type: none;
+}
+#skills ul li{
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 10px;
+    border: 2px solid #67ace1;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+#projects{
+    margin-left: 7%;
+    width: 90%;
+    text-align: justify;
+}
+#projects h2{
+    color: #1266a7;
+}
+#projects h4{
+    color: #1266a7;
+}
+#projectSpace{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#projectSpace div{
+    width: 40%;
+    line-height: 2.5;
+    font-size: larger;
+    padding: 20px;
+    border: 1px solid #48a4eb;
+    border-radius: 10px;
+    background-color: #92c9f4;
+} 
+#projectSpace img{
+    width: 80%;
+    height:100%;
+    margin: 20px 10px;
+    border: 1px solid #48a4eb;
+    border-radius: 10px;
+}
+#projectSpace a{
+    font-size: large;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin-top: 30px;
+    gap:50px;
+    margin-left: 35%;
+}
+footer a img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: 1s;
+}
+footer a img:hover{
+    width: 50px;
+    height: 50px;
+}
+#contact{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 13%;
+    margin-top: 5%;
+}
+#contact div{
+    padding: 40px;
+    width: 80%;
+    height: 53vh;
+}
+#contact #contact1{
+    background-color: #92c9f4;
+    color: white;
+}
+#contact #contact2{
+    color:#1266a7;
+    background-color: white;
+}
+#contact #contact2 form{
+    display: flex;
+    flex-direction: column;
+}
+#contact #contact2 form input{
+    padding: 15px 10px;
+    width: 70%;
+    margin-bottom: 5%;
+    border: 2px solid #92c9f4;
+    border-radius: 5px;
+    outline: none;
+}
+#contact #contact2 form textarea{
+    border: 2px solid #92c9f4;
+    border-radius: 5px;
+    width: 90%;
+    outline: none;
+}
+#contact #contact2 form button{
+    background-color: #92c9f4;
+    color: white;
+    font-weight: 800;
+    font-size: 14px;
+    border: none;
+    width: 30%;
+    padding: 10px;
+    border-radius: 50px;
+    margin-left: 35%;
+    cursor: pointer;
+}
