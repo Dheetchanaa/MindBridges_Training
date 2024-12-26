@@ -57,9 +57,12 @@
             var dueDate = document.getElementById('date').value;
             var tableBody = document.getElementById('tbody');
             var existingRow = Array.from(tableBody.rows).find(
-                row => row.cells[0].innerText ==name
+                row => row.cells[0].innerText == name
             )
-            if(!existingRow){
+            var index = Array.from(tableBody.rows).findIndex(
+                row => row.cells[0].innerText == name
+            )
+            if(index<0){
                 const row = tableBody.insertRow();
                 row.innerHTML = `
                     <td>${name}</td>
@@ -69,7 +72,8 @@
                 `
             }
             else {
-                var row = tableBody.insertRow(existingRow.rowIndex -1);
+                console.log(index)
+                var row = tableBody.insertRow(index + existingRow.cells[0].rowSpan);
                 row.innerHTML = `
                     <td>${taskTitle}</td>
                     <td>${taskDescription}</td>
