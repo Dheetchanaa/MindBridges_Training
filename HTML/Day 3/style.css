@@ -1,0 +1,88 @@
+*{
+    background-color: #d879d7;
+}
+header{
+    text-align: center;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 5%;
+}
+.employee-form{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 200%;
+    border: 2px solid #db4ed9;
+    margin: 3%;
+    background-color: white;
+    border-radius: 10px;
+}
+.employee-form h2{
+    background-color: white;
+    color: black;
+}
+.employee-form input{
+    padding: 20px;
+    width: 50%;
+    margin-bottom: 5%;
+    outline: none;
+    background-color: white;
+    border : 2px solid #d879d7;
+    border-radius: 5px;
+}
+#date{
+    font-weight: 800;
+}
+.employee-form textarea{
+    padding: 20px;
+    margin-bottom: 5%;
+    outline: none;
+    background-color: white;
+    border : 2px solid #d879d7;
+    border-radius: 5px;
+}
+.employee-form button{
+    width: 20%;
+    padding: 8px;
+    border-radius: 20px;
+    outline: none;
+    background-color: #d879d7;
+    color: black;
+    margin-left: 40%;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+.tableSection{
+    width: 43%;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #db4ed9;
+    padding: 30px;
+    margin: 0.5%;
+}
+.tableSection h2{
+    background-color: white;
+}
+.tableSection thead{
+    border: 2px solid black;
+    border-radius: 20%;
+}
+.tableSection table, th, td{
+    border-collapse: collapse;
+}
+.tableSection table th{
+    padding: 10px 45px;
+    width: 90%;
+    border: 2px solid black;
+    background-color: #d879d7;
+}
+.tableSection table td{
+    background-color: white;
+    padding: 10px 30px;
+    width: 90%;
+    border: 2px solid black;
+    text-align: center;
+}

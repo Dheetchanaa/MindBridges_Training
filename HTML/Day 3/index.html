@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Employee Task Tracker</h1></header>
+    <div class="container">
+        <section>
+            <form class="employee-form">
+                <h2 style="text-align: center;">Task Assignment</h2>
+                <input type="text" placeholder="Enter your name" id="name" required>
+                <input type="text" placeholder="Task title" id = "TaskTitle" required>
+                <textarea placeholder="Task description.." cols="1" rows="10" id="TaskDescription" required></textarea>
+                <input type="date" id="date" required>
+                <button type="button" onclick="addData()">Assign task</button>
+            </form>
+        </section>
+        <section class="tableSection">
+            <h2 style="text-align: center;">Employee Tasks</h2>
+            <table id="taskTable">
+                <thead>
+                    <tr>
+                        <th rowspan="2">Employee Name</th>
+                        <th colspan="2">Task Details</th>
+                        <th rowspan="2">Due Date</th>
+                    </tr>
+                    <tr>
+                        <th>Task Title</th>
+                        <th>Task Description</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <tr>
+                        <td rowspan="2">John</td>
+                        <td>Task1</td>
+                        <td>Complete the project</td>
+                        <td>2024-12-28</td>
+                    </tr>
+                    <tr>
+                        <td>Task2</td>
+                        <td>Prepare presentatiob</td>
+                        <td>2024-12-30</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <script>
+        function addData(){
+            var name = document.getElementById('name').value;
+            var taskTitle = document.getElementById('TaskTitle').value;
+            var taskDescription = document.getElementById('TaskDescription').value;
+            var dueDate = document.getElementById('date').value;
+            var tableBody = document.getElementById('tbody');
+            var existingRow = Array.from(tableBody.rows).find(
+                row => row.cells[0].innerText ==name
+            )
+            if(!existingRow){
+                const row = tableBody.insertRow();
+                row.innerHTML = `
+                    <td>${name}</td>
+                    <td>${taskTitle}</td>
+                    <td>${taskDescription}</td>
+                    <td>${dueDate}</td>
+                `
+            }
+            else {
+                var row = tableBody.insertRow(existingRow.rowIndex -1);
+                row.innerHTML = `
+                    <td>${taskTitle}</td>
+                    <td>${taskDescription}</td>
+                    <td>${dueDate}</td>
+                `;
+                existingRow.cells[0].rowSpan += 1;
+            }
+}
+    </script>
+</body>
+</html>
