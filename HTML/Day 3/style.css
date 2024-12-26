@@ -43,14 +43,18 @@ header{
     border : 2px solid #d879d7;
     border-radius: 5px;
 }
+.employee-form div{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    width: 50%;
+}
 .employee-form button{
-    width: 20%;
-    padding: 8px;
+    padding: 10px 20px;
     border-radius: 20px;
     outline: none;
     background-color: #d879d7;
     color: black;
-    margin-left: 40%;
     font-weight: 600;
     border: none;
     cursor: pointer;
