@@ -12,7 +12,7 @@ header{
 .employee-form{
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding: 15px 30px;
     width: 200%;
     border: 2px solid #db4ed9;
     margin: 3%;
