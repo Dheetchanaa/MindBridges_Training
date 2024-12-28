@@ -1,0 +1,277 @@
+body{
+    background-image: url("https://media.istockphoto.com/id/1131174214/vector/vector-illustration-of-a-semi-seamless-background-in-vintage-style-beige-colored-stars.jpg?s=612x612&w=0&k=20&c=B6nUaHZZ_zJFgXr5pWx94VHfRJthtfPg_PRXxI4EoOU=");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0%;
+    font-family: Georgia;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+    margin:0% 1%;
+    text-transform: uppercase;
+    text-align: center;
+}
+header h1{
+    text-align: center;
+    font-size: 55px;
+    line-height: 1.5;
+    padding-top: 40px ;
+    border-top: 2px solid black;
+    text-transform: uppercase;
+    color: #ae1211;
+    font-weight: bolder;
+}
+header .left-header,.right-header{
+    margin: 0px 20px;
+    width: 30%;
+    padding-top: 0px;
+    border-top: 2px solid black;
+}
+.left-header .fa-cake-candles{
+    font-size: 30px;
+}
+.left-header h2{
+    padding-top: 25px;
+}
+.right-header h2{
+    padding-top: 25px;
+}
+.right-header .fa-calendar-days{
+    font-size: 30px;
+}
+nav{
+    margin: -1% 1%;
+    border-bottom: 2px solid black;
+}
+nav ul li{ 
+    display: inline-block;
+    font-size: 20px;
+    padding: 0px 35px;
+    font-weight: bolder;
+}
+nav ul li a{
+    text-decoration: none;
+    transition: 1s ease;
+    color: black;
+    cursor: pointer;
+}
+nav ul li .fa-star{
+    color: goldenrod;
+}
+nav ul li a:hover{
+    font-size: 23px;
+    color: #ae1211;
+}
+.home{
+    display: flex;
+    justify-content: space-between;
+    margin: 2%;
+}
+.image-section{
+    width: 100%;
+}
+.image-section img{
+    width: 120%;
+    height: 88%;
+    margin-top: 12%;
+}
+.para-section{
+    width: 200%;
+    margin-left: 10%;
+    margin-right: 4%;
+}
+.para-section h1{
+    font-size: 50px;
+}
+.para-section p{
+    text-align: justify;
+    font-size: 20px;
+    line-height: 2;
+}
+.Gallery{
+    margin: 2%;
+}
+.Gallery h1{
+    font-size: 50px;
+    text-align: center;
+}
+.Gallery .Moment{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+}
+.Gallery .Moment .content1{
+    width: 100%;
+}
+.Gallery .Moment .content1 h2{
+    font-size: 30px;
+    line-height: 1.5;
+    color: #ae1211;
+}
+.Gallery .Moment .content1 p{
+    text-align: justify;
+    font-size: 20px;
+    line-height: 2;
+}
+.Gallery .Moment .image1{
+    width: 100%;
+    height:fit-content;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+.Gallery .Moment .content2{
+    width: 300%;
+    margin-left: 30%;
+}
+.Gallery .Moment .content2 h2{
+    font-size: 30px;
+    color: #ae1211;
+}
+.Gallery .Moment .content2 p{
+    text-align: justify;
+    font-size: 20px;
+    line-height: 2;
+}
+.Gallery .Moment .image2{
+    margin-top: 30px;
+}
+.Gallery .Moment .image3{
+    width: 100%;
+    height:fit-content;
+    margin-left: 10%;
+    margin-top: 50px;
+}
+.Gallery .Moment .content3{
+    width: 100%;
+}
+.Gallery .Moment .content3 h2{
+    font-size: 30px;
+    color: #ae1211;
+}
+.Gallery .Moment .content3 p{
+    text-align: justify;
+    font-size: 20px;
+    line-height: 2;
+}
+#Messages h1{
+    font-size: 50px;
+    text-align: center;
+    margin: 2%;
+}
+.messages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 95%;
+    margin:0% 2%;
+}
+.messages .message-container{
+    width: 25%;
+    background-color: #ae1211;
+    color: white;
+    border-radius: 10px;
+    margin-top: 2%;
+    margin-right: 3%;
+    transition: transform 0.5s ease;
+} 
+.messages .message-container:hover{
+   transform: scale(1.05);
+}
+.messages .message-container .color{
+    border-radius: 10px;
+    width: 100%;
+}
+.messages .message-container .color img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 20vh;
+}
+.messages .message-container .para{
+    padding: 0px 30px;
+    font-size: 20px;
+    width: 90%;
+    font-family: Comic Sans MS, Bradley Hand;
+    word-spacing: 10px;
+}
+.Events{
+    margin: 2%;
+}
+.Events h1{
+    font-size: 50px;
+    text-align: center;
+}
+.Events .container1, .container2, .container3{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+}
+.Events .container1 .part1{
+    margin-top: 3%;
+}
+.Events .container1 .part2{
+    margin-left:10%;
+}
+.Events .container1 .part2 h2{
+    font-size: 30px;
+    color: #ae1211;
+}
+.Events .container1 .part2 ul li{
+    line-height: 2;
+    font-size: 20px;
+    text-align: justify;
+    list-style-type: square;
+}
+.Events .container2 .part1{
+    width: 80%;
+    margin-right: 5%;
+}
+.Events .container2 .part1 h2{
+    font-size: 30px;
+    color: #ae1211;
+}
+.Events .container2 .part1 ul li{
+    line-height: 2;
+    font-size: 20px;
+    text-align: justify;
+    list-style-type: disc;
+}
+.Events .container3 .part1{
+    margin-top:2%;
+}
+.Events .container3 .part2{
+    margin-left:2%;
+}
+.Events .container3 .part2 h2{
+    font-size: 30px;
+    color: #ae1211;
+}
+.Events .container3 .part2 ul li{
+    line-height: 2;
+    font-size: 20px;
+    text-align: justify;
+    list-style-type: square;
+}
+footer{
+    color: #ae1211;
+    border-top: 2px solid black;
+    margin: 0% 2%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 800;
+}
+footer ul li{
+    color: black;
+    display: inline-block;
+    padding: 0px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: tranform 1s ease-in-out;
+}
+footer ul li:hover{
+    transform: scale(1.2);
+}
