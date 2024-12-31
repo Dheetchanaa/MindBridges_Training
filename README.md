@@ -8,5 +8,5 @@
 </ul>
 <h4>CSS</h4>
 <ul>
-  <li>Day1 - Tiya Golf Club Websiter</li>
+  <li>Day1 - Tiya Golf Club Website</li>
 </ul>
