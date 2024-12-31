@@ -4,4 +4,5 @@
   <li>Day1 - Basic Tags</li>
   <li>Day2 - Personal Portfolio</li>
   <li>Day3 - Forms and Tables</li>
+  <li>Day4 - Classic Birthday Newspaper</li>
 </ul>
