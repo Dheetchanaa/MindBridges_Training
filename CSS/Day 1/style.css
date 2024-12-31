@@ -1,0 +1,436 @@
+*{
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+header{
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2% 4% 1% 4%;
+    width: 100%;
+    background-color: #3d405b;
+    color: white;
+    position: fixed;
+}
+header .logo-container{
+    display: flex;
+    justify-content: space-between;
+    width: 12%;
+    cursor: pointer;
+}
+header .logo-container img{
+    filter: invert(1);
+}
+header .tiya-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+header .right-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+}
+header ul li{
+    display: inline-block;
+    padding: 0px 20px;
+    cursor: pointer;
+    font-size: 17px;
+}
+header ul li a{
+    text-decoration: none;
+    color: white
+}
+header ul li a:hover{
+    color: #edc88d;
+}
+.btn-prime{
+    color: #edc88d;
+    background-color: transparent;
+    border: 2px solid #edc88d;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: 700;
+}
+.btn-prime a{
+    color: #edc88d;
+    text-decoration: none;
+}
+.btn-prime a:hover{
+    color: white;
+}
+.btn-prime:hover{
+    background-color: #edc88d;
+    color: white;
+}
+.home{
+    background-image: url("	https://templatemo.com/templates/templatemo_587_tiya_golf_club/images/anna-rosar-ZxFyVBHMK-c-unsplash.jpg");
+    background-position: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #3d405b;
+    opacity: 0.5;
+}
+.home1{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    margin: 14% 10%;
+    color: white;
+}
+.home1 .left{
+    width: 30%;
+}
+.home1 .left .down{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    padding: 8% 0%;
+}
+.home1 .left h1{
+    font-size: 36px;
+    line-height: 1.5;
+    color: white;
+}
+.home1 .right{
+    width: 50%;
+}
+.home1 .right iframe{
+    border-radius: 20px;
+}
+.about{
+    margin:5% 7%;
+}
+.about h1{
+    font-size: 34px;
+}
+.about .about-container{
+    display: flex;
+    column-gap: 10%;
+    line-height: 2;
+    margin-top: 5%;
+}
+.grey{
+    color: grey;
+    font-size: 18px;
+}
+.about .about-container .up{
+    width: 80%;
+    height: 100%;
+}
+.about .about-container .down{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    column-gap: 40px;
+}
+.about .about-container .down img{
+    border-radius: 20px;
+}
+.about .about-container .down .caption{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.newsletter{
+    background-image: url("	https://templatemo.com/templates/templatemo_587_tiya_golf_club/images/frederik-rosar-NDSZcCfnsbY-unsplash.jpg");
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.newsletter .container{
+    background-color: rgba(254, 239, 229, 0.7);
+    width: 35%;
+    height: 30%;
+    border-radius: 20px;
+    margin: 8%;
+    padding: 50px;
+    position: absolute;
+}
+.newsletter .container h1{
+    font-size: 34px;
+}
+.newsletter .container p{
+    line-height: 1.5;
+    color: gray;
+}
+.back-container{
+    background-color: white;
+    margin-top: 5%;
+    padding: 10px 20px;
+    border-radius: 50px;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.back-container input{
+    border: none;
+    font-size: 20px;
+    outline: none;
+}
+.fa-envelope{
+    font-size: 20px;
+}
+.back-container button{
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    background-color: #f2cc8f;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.back-container button:hover{
+    background-color: #fb8449;
+}
+.membership{
+    margin: 5% 7%;
+}
+.membership h1{
+    font-size: 34px;
+}
+.membership-container{
+    display: flex;
+    column-gap: 10%;
+    margin-top: 5%;
+}
+.membership-container table{
+    border-collapse: collapse;
+    margin-top: 5%;
+}
+.membership-container table thead tr th{
+    background-color: #3d405b;
+    color: white;
+    padding: 20px 40px;
+}
+.membership-container table tbody tr td{
+    padding: 20px 40px;
+}
+.membership-container table tbody tr:nth-child(odd){
+    background-color: white;
+}
+.membership-container table tbody tr:nth-child(even){
+    background-color: #f4f1de;
+}
+.fa-circle-check{
+    color: #81b29a;
+}
+.fa-circle-xmark{
+    color: #e07a5f;
+}
+.form-container{
+    margin-top: 10%;
+    background-color: #3d405b;
+    color: white;
+    padding: 20px;
+    width: 180%;
+    border-radius: 20px;
+}
+.form-container .form-inputs{
+    display: flex;
+    margin-top: 3%;
+    gap: 20px;
+    flex-direction: column;
+}
+.form-container .form-inputs input{
+    padding: 20px 30px;
+    width: 88%;
+    border-radius: 50px;
+    border: none;
+}
+.form-container .form-inputs textarea{
+    width: 88%;
+    padding: 20px 30px;
+    border-radius: 20px;
+}
+.form-container .form-inputs button{
+    background-color: #f2cc8f;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 16px 40px;
+    width: 100%;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.form-container .form-inputs button:hover{
+    background-color: #fb8449;
+}
+.events{
+    padding: 3% 7%;
+    background-color: #f4f1de;
+}
+.events img{
+    border-radius: 20px;
+}
+.events h1{
+    font-size: 32px;
+}
+.events .events-container{
+    display: flex;
+    flex-direction: column;
+    column-gap: -100px;
+    width: 100%;
+    height: 100vh;
+}
+.events .events-container .up{
+    padding: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.events .events-container .up .up-upper{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    gap: 30px;
+}
+.events .calendar{
+    width: 24%;
+    height: 20%;
+    padding: 28px 26px;
+    border-radius: 20px;
+    background-color: #81b29a;
+    text-align: center;
+}
+.events .calendar p{
+    font-size: 38px;
+}
+.events .calendar h2{
+    margin-top: 6%;
+    font-size: 16px;
+    color: white;
+}
+.events .up-activities{
+    width: 60%;
+}
+.events .up-activities h4{
+    font-size: 22px;
+    color: #3d405b;
+    font-weight: 500;
+    cursor: pointer;
+}
+.events .up-activities h4:hover{
+    color: #fb8449;;
+}
+.violet{
+    color: #3d405b;
+    font-weight: 7650;
+}
+.small-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+.small-container button{
+    background-color: #f2cc8f;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.events .small-container button:hover{
+    background-color: #fb8449;
+}
+.bg{
+    border-radius: 20px;
+    background-color: white;
+}
+.contact{
+    padding: 3% 7%;
+}
+.contact h1{
+    font-size: 34px;
+}
+.contact .contact-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 38%;
+    height: 50%;
+}
+.contact-container .top{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+.contact-container input{
+    padding: 16px 30px;
+    border-radius: 50px;
+    border: 1px solid grey;
+    margin: 5% 0%;
+    font-size:14px;
+}
+.contact-container textarea{
+    padding: 16px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    width:"5%";
+    font-size:14px;
+}
+.contact-container button{
+    background-color: #f2cc8f;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.contact-container button:hover{
+    background-color: #fb8449;
+}
+.contact-down{
+    display: flex;
+    justify-content: space-between;
+    margin: 7% 0%;
+}
+.logo-container1{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+}
+.small-container1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10%;
+    gap:40px
+}
+.fa-brands{
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.fa-brands:hover{
+    color:#81b29a
+}
+.icons{
+    display: flex;
+    gap: 20px;
+}
