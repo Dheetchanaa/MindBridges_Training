@@ -10,24 +10,58 @@
 <body>
     <header>
         <div class="logo-container"> 
-            <img src="Documents/logo.png" width="70px" height="60px">
+            <img src="Documents/logo.png" width="15%" height="15%">
             <div class="tiya-container">
-                <h2>Tiya</h2>
-                <h4>Golf club</h4>
+                <p class="size1">Tiya</p>
+                <p class="size2">Golf club</p>
             </div>
         </div>
         <div class="right-header">
-            <div>
                 <ul>
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#About">About</a></li>
                 <li><a href="#Membership">Membership</a></li>
                 <li><a href="#Events">Events</a></li>
                 <li><a href="#Contact us">Contact us</a></li>
-                <li><a href="#Pages">Pages</a><i class="fa-solid fa-angle-down"></i></li>
-            </ul>
-            </div>
-            <button class="btn-prime">Member Login</button>
+                <li class="dropdown">
+                        <a href="#Pages">Pages</a> <i class="fa-solid fa-angle-down"></i>
+                        <div class="dropdown-content">
+                            <div>
+                                <a href="">Event Listing</a>
+                            </div>
+                            <div>
+                                <a href=""> Event Detail</a>
+                            </div>
+                        </div>
+                </li>
+                </ul>
+                <div class="sidebar">
+                    <div>
+                        <button class="btn-prime" onclick="sidebarOpen()">Member Login</button>
+                    </div>
+                </div>
+                <div class="sidebar-content" id="sidebarContent">
+                    <form action="">
+                        <div class="top">
+                            <p class="p">Member Login</p>
+                            <i class="fa-solid fa-xmark" onclick="sidebarClose()"></i>
+                        </div>
+                        <br>
+                        <label>Membership no.</label>
+                        <input type="text" placeholder="11002560">
+                        <label>Password</label>
+                        <input type="text" placeholder="Password">
+                        <div class="check-box">
+                            <input type="checkbox">Remember me
+                        </div>
+                        <center><button>Login</button></center><br>
+                        <center><a href="">Forgotten password?</a></center>
+                        <div class="bottom">
+                            <h4>Any Questions?</h4>
+                            <a>010-020-0340</a>
+                        </div>
+                    </form>
+                </div>
         </div>
     </header>
     <section id="Home" class="home">
@@ -36,12 +70,12 @@
             <div class="left">
                 <h1>Welcome to the club Tiya is Modern</h1>
                 <div class="down">
-                    <button class="btn-prime"><a href="#About">Our Story</a></button>
+                    <button class="btn-prime-full"><a href="#About">Our Story</a></button>
                     <p>Become a member</p>
                 </div>
             </div>
             <div class="right">
-                <iframe width="600" height="350" src="https://www.youtube.com/embed/MGNgbNGOzh8?si=q9M99oKxbGZBT9_l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="620" height="350" src="https://www.youtube.com/embed/MGNgbNGOzh8?si=q9M99oKxbGZBT9_l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>   
     </section>
@@ -51,13 +85,13 @@
         </center>
             <div class="about-container">
                 <div class="up">
-                    <h2>Tiya club history</h2>
-                    <p class="grey"> <b>Since 1984,</b> Tiya is ranked #8 in the top 10 golf courses in the world. Tiya is Bootstrap 5 HTML CSS template for golf clubs. Anyone can modify and use this layout for commercial purposes.<br>
+                    <p class="h2">Tiya club history</p>
+                    <p class="grey1"> <b>Since 1984,</b> Tiya is ranked #8 in the top 10 golf courses in the world. Tiya is Bootstrap 5 HTML CSS template for golf clubs. Anyone can modify and use this layout for commercial purposes.<br><br>
                         Tiya Golf Club is 100% free CSS template provided by TemplateMo website. Please tell your friends about our website. Thank you for visiting.</p>
                 </div>
                 <div class="down">
                     <div>
-                        <img src="https://templatemo.com/templates/templatemo_587_tiya_golf_club/images/members/portrait-young-handsome-businessman-wearing-suit-standing-with-crossed-arms-with-isolated-studio-white-background.jpg" width="100%" height="70%">
+                        <img src="https://templatemo.com/templates/templatemo_587_tiya_golf_club/images/members/portrait-young-handsome-businessman-wearing-suit-standing-with-crossed-arms-with-isolated-studio-white-background.jpg" width="90%" height="80%">
                         <div class="caption">
                             <h2>Michael</h2>
                             <p class="grey">Founder</p>
@@ -65,7 +99,7 @@
                         
                     </div>
                     <div>
-                        <img src="	https://templatemo.com/templates/templatemo_587_tiya_golf_club/images/members/successful-asian-lady-boss-red-blazer-holding-clipboard-with-documens-pen-working-looking-happy-white-background.jpg" width="100%" height="70%">
+                        <img src="	https://templatemo.com/templates/templatemo_587_tiya_golf_club/images/members/successful-asian-lady-boss-red-blazer-holding-clipboard-with-documens-pen-working-looking-happy-white-background.jpg" width="90%" height="80%">
                         <div class="caption">
                             <h2>Sandy</h2>
                             <p class="grey">Co-Founder</p>
@@ -76,7 +110,7 @@
     </section>
         <section class="newsletter">
             <div class="overlay2"></div>
-            <div class="container">
+            <form class="container">
                 <h1>Get our newsletter</h1>
                 <br>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore.</p>
@@ -87,7 +121,7 @@
                     </div>
                      <button>Subscribe</button>
                 </div>
-            </div>
+            </form>
         </section>
         <section id="Membership" class="membership">
             <center>
@@ -95,8 +129,8 @@
             </center>
             <div class="membership-container">
                 <div>
-                    <h2>Membership Fees</h2>
-                    <table>
+                    <p>Membership Fees</p>
+                    <table class="membership-table">
                         <thead>
                             <tr>
                                 <th>Yearly Access</th>
@@ -146,8 +180,8 @@
                     </table>
                 </div>
                 <div>
-                    <h2>Please join us!</h2>
-                    <div class="form-container">
+                    <p>Please join us!</p>
+                    <form class="form-container">
                         <h2>Become a member</h2>
                         <div class="form-inputs">
                             <input type="text" placeholder="Full Name">
@@ -155,32 +189,32 @@
                             <textarea placeholder="Comments" cols="4" rows="4"></textarea>
                             <button type="submit">Submit</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>
         <section id="Events" class="events">
-                <h1>Upcoming Events</h1>
+                <p class="h1">Upcoming Events</p>
             <div class="events-container">
                 <div class="up">
                     <div class="up-upper">
                         <div class="calendar">
                             <p>24</p>
-                            <h2>Feb 2048</h2>
+                            <p class="h2">Feb 2048</p>
                         </div>
                         <div>
-                            <img src="https://templatemo.com/templates/templatemo_587_tiya_golf_club/images/professional-golf-player.jpg" width="90%" height="90%">
+                            <img src="https://templatemo.com/templates/templatemo_587_tiya_golf_club/images/professional-golf-player.jpg" width="100%" height="100%">
                         </div>
                     </div>
                     <div class="up-activities">
-                        <h4>Private activities</h4><br>
+                        <p class="h4">Private activities</p><br>
                         <p class="grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <br><hr>
                         <div class="small-container">
                             <div>
                                 <b>
-                                    <p class="violet">Location:</p><br>
-                                    <p class="violet">Ticket:</p>
+                                    <p class="violet-1">Location:</p><br>
+                                    <p class="violet-1">Ticket:</p>
                                 </b>
                             </div>
                             <div>
@@ -197,21 +231,21 @@
                     <div class="up-upper">
                         <div class="calendar">
                             <p>28</p>
-                            <h2>Feb 2048</h2>
+                            <p class="h2">Feb 2048</p>
                         </div>
                         <div>
-                            <img src="https://templatemo.com/templates/templatemo_587_tiya_golf_club/images/girl-taking-selfie-with-friends-golf-field.jpg" width="90%" height="90%">
+                            <img src="https://templatemo.com/templates/templatemo_587_tiya_golf_club/images/girl-taking-selfie-with-friends-golf-field.jpg" width="100%" height="100%">
                         </div>
                     </div>
                     <div class="up-activities">
-                        <h4>Group tournament activities</h4><br>
+                        <p class="h4">Group tournament activities</p><br>
                         <p class="grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <br><hr>
                         <div class="small-container">
                             <div>
                                 <b>
-                                    <p class="violet">Location:</p><br>
-                                    <p class="violet">Ticket:</p>
+                                    <p class="violet-1">Location:</p><br>
+                                    <p class="violet-1">Ticket:</p>
                                 </b>
                             </div>
                             <div>
@@ -228,51 +262,70 @@
         </section>
         <section id="Contact us" class="contact">
             <h1>Contact Tiya</h1>
-            <div class="contact-container">
-                <div class="top">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="Email address">
+            <div class="contact-up">
+                <div class="contact-container">
+                    <div class="top">
+                        <input type="text" placeholder="Full Name">
+                        <input type="email" placeholder="Email address">
+                    </div>
+                    <textarea rows="5" placeholder="Message"></textarea>
+                    <br>
+                    <button type="submit">Submit form</button>
                 </div>
-                <textarea rows="5" placeholder="Message"></textarea>
-                <br>
-                <button type="submit">Submit form</button>
+                <div class="map">
+                    <img src="https://templatemo.com/templates/templatemo_587_tiya_golf_club/images/WorldMap.svg" width="90%" height="85%">
+                    <div class="map-inner">
+                        <h4>London, United Kingdom</h4>
+                        <p class="h3">(020) 010-020-0340</p>
+                        <p>info@company.com</p>
+                    </div>
+                    <button>Directions</button>
+                </div>
             </div>
             <div class="contact-down">
                 <div class="logo-container1"> 
-                    <img src="Documents/logo.png" width="70px" height="60px">
+                    <img src="Documents/logo.png" width="15%" height="24%">
                     <div class="tiya-container">
-                        <h2>Tiya</h2>
-                        <h4>Golf club</h4>
+                        <p class="h2">Tiya</p>
+                        <p class="h4">Golf club</p>
                     </div>
                 </div>
                 <div>
-                    <h2>Join us</h2>
-                    <div class="small-container1">
-                        <div>
-                            <p class="grey">Mon-Fri</p>
-                            <br><br>
-                            <p class="grey">Sat-Sun</p>
+                    <p class="violet">Join us</p>
+                    <div class="content-container">
+                    <div>
+                        <div class="small-container1">
+                            <div>
+                                <p class="grey boldness">Mon-Fri</p>
+                                <br><br>
+                                <p class="grey boldness">Sat-Sun</p>
+                            </div>
+                            <div>
+                                <p class="grey">6:00 AM - 6:00 PM</p>
+                                <br><br>
+                                <p class="grey">6:30 AM - 8:30 PM</p>
+                            </div>
                         </div>
-                        <div>
-                            <p class="grey">6:00 AM - 6:00 PM</p>
-                            <br><br>
-                            <p class="grey">6:30 AM - 8:30 PM</p>
-                        </div>
+                        <br><br>
+                        <p class="grey">Copyright © 2048 Tiya Golf Club</p>
                     </div>
-                    <br><br>
-                    <p class="grey">Copyright © 2048 Tiya Golf Club</p>
-                </div>
-                <div>
-                    <div class="icons">
-                        <i class="fa-brands fa-square-instagram"></i>
-                        <i class="fa-brands fa-square-twitter"></i>
-                        <i class="fa-brands fa-square-whatsapp"></i>
-                    </div>   
-                    <br>
-                    <br>
-                    <p>Design: TemplateMo</p>
+                    <div>
+                        <div class="icons">
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>   
+                        <br>
+                        <div class="final-text">
+                            <p class="grey">Design: </p>
+                            <p class="violet1">TemplateMo</p>
+                        </div>
+                        
+                    </div>
+                    </div>
                 </div>
             </div>
         </section>
 </body>
+<script src="script.js"></script>
 </html>

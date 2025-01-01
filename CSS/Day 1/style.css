@@ -1,14 +1,17 @@
 *{
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+body{
+    position: relative;
 }
 header{
     position: absolute;
-    z-index: 3;
+    z-index: 1;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 2% 4% 1% 4%;
+    padding: 1.5% 7%;
     width: 100%;
     background-color: #3d405b;
     color: white;
@@ -16,36 +19,74 @@ header{
 }
 header .logo-container{
     display: flex;
-    justify-content: space-between;
-    width: 12%;
+    gap: 3%;
     cursor: pointer;
 }
 header .logo-container img{
     filter: invert(1);
+    margin-top: 1%;
 }
 header .tiya-container{
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
+}
+header .tiya-container .size1{
+    font-size: 24px;
+    font-weight: 700;
+}
+header .tiya-container .size2{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
 }
 header .right-header{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 65%;
+    gap: 2%;
+    width: 70%;
 }
 header ul li{
     display: inline-block;
     padding: 0px 20px;
     cursor: pointer;
-    font-size: 17px;
+    font-size: 16px;
 }
 header ul li a{
     text-decoration: none;
-    color: white
+    color: white;
+    font-weight: 600;
 }
 header ul li a:hover{
     color: #edc88d;
+}
+.fa-angle-down:hover{
+    color: #edc88d;
+}
+header .dropdown{
+    position: relative;
+    padding: 20px;
+}
+header .dropdown-content{
+    position: absolute;
+    display: none;
+    background-color: #f9f9f9;
+    color:grey;
+    width: 100px;
+    top: 40px;
+    padding: 0px 20px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+header .dropdown-content div{
+    margin-top: 14%;
+}
+header .dropdown-content a{
+    color: grey;
+    font-size: 16px;
+    font-weight: 400;
+}
+header .dropdown:hover .dropdown-content{
+    display: block;
 }
 .btn-prime{
     color: #edc88d;
@@ -68,6 +109,115 @@ header ul li a:hover{
     background-color: #edc88d;
     color: white;
 }
+.sidebar-content {
+    position: absolute;
+    background-color: #81b29a;
+    color: black;
+    width: 30%;
+    right: -30%;
+    height: 100vh;
+    top: 0;
+    padding: 50px;
+    transition: 0.4s ease-in-out;
+}
+.sidebar-content.open {
+    right: 0;
+}
+.sidebar-content form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.sidebar-content form .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sidebar-content form .fa-xmark {
+    font-size: 28px;
+    color: #40594d;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.sidebar-content form .fa-xmark:hover {
+    transform: rotate(180deg);
+    color:black
+}
+.sidebar-content form .p{
+    font-size: 24px;
+    font-weight: 500;
+}
+.sidebar-content form label{
+    margin-top: 8%;
+    font-size: 17px;
+    color:#313c3c;
+    font-weight: 500;
+}
+.sidebar-content form input{
+    padding: 10px 20px;
+    margin-top: 3%;
+    border-radius: 50px;
+    border: 2px solid #dee2e6;
+    font-size: 18px;
+}
+.sidebar-content form input:hover{
+    border: 2px solid black;
+}
+.sidebar-content form .check-box{
+    margin-top: 4%;
+    color:#313c3c;
+    font-weight: 500;
+}
+.sidebar-content form .check-box input{
+    font-size: 40px;
+}
+.sidebar-content form button{
+    padding: 14px 42px;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    background-color: #edc88d;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 8%;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.sidebar-content form button:hover{
+    background-color: #e07a5f;
+}
+.sidebar-content form a{
+    color: #495466;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+.sidebar-content form a:hover{
+    color: #edc88d;
+}
+.sidebar-content form .bottom{
+    margin-top: 40%;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sidebar-content form .bottom h4{
+    font-size: 18px;
+    color: white;
+}
+.sidebar-content form .bottom a{
+    font-size: 20px;
+    color: #4b5768;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.sidebar-content form .bottom a:hover{
+    color: #edc88d;
+}
 .home{
     background-image: url("	https://templatemo.com/templates/templatemo_587_tiya_golf_club/images/anna-rosar-ZxFyVBHMK-c-unsplash.jpg");
     background-position: center;
@@ -85,8 +235,8 @@ header ul li a:hover{
 .home1{
     position: absolute;
     display: flex;
-    justify-content: space-between;
-    margin: 14% 10%;
+    gap:20%;
+    margin: 12% 8%;
     color: white;
 }
 .home1 .left{
@@ -99,10 +249,32 @@ header ul li a:hover{
     width: 70%;
     padding: 8% 0%;
 }
+.home1 .left .down p{
+    font-weight: 600;
+}
 .home1 .left h1{
     font-size: 36px;
     line-height: 1.5;
     color: white;
+}
+.btn-prime-full{
+    background-color: #edc88d;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: 700;
+    border: none;
+}
+.btn-prime-full a{
+    color: white;
+    text-decoration: none;
+}
+.btn-prime-full a:hover{
+    color: white;
+}
+.btn-prime-full:hover{
+    background-color: #fb8449;
 }
 .home1 .right{
     width: 50%;
@@ -118,6 +290,7 @@ header ul li a:hover{
 }
 .about .about-container{
     display: flex;
+    align-items: center;
     column-gap: 10%;
     line-height: 2;
     margin-top: 5%;
@@ -126,22 +299,36 @@ header ul li a:hover{
     color: grey;
     font-size: 18px;
 }
+.grey1{
+    color: grey;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 1%;
+}
 .about .about-container .up{
-    width: 80%;
+    width: 70%;
     height: 100%;
+}
+.about .about-container .up .h2{
+    font-size: 28px;
+    font-weight: 500;
+    text-transform: capitalize;
 }
 .about .about-container .down{
     width: 100%;
     height: 100%;
     display: flex;
-    column-gap: 40px;
+    column-gap: 2px;
+}
+.about .about-container .down h2{
+    font-weight: 500;
 }
 .about .about-container .down img{
     border-radius: 20px;
 }
 .about .about-container .down .caption{
     display: flex;
-    justify-content: space-between;
+    gap:44%;
     align-items: center;
 }
 .newsletter{
@@ -164,6 +351,7 @@ header ul li a:hover{
     font-size: 34px;
 }
 .newsletter .container p{
+    font-size: 20px;
     line-height: 1.5;
     color: gray;
 }
@@ -172,7 +360,7 @@ header ul li a:hover{
     margin-top: 5%;
     padding: 10px 20px;
     border-radius: 50px;
-    width: 85%;
+    max-width: 85%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -207,25 +395,38 @@ header ul li a:hover{
 }
 .membership-container{
     display: flex;
-    column-gap: 10%;
-    margin-top: 5%;
+    column-gap: 7%;
+    margin-top: 4%;
 }
-.membership-container table{
+.membership-container p{
+    font-size: 24px;
+    font-weight: 500;
+}
+.membership-container .membership-table{
     border-collapse: collapse;
     margin-top: 5%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    overflow: hidden;
 }
-.membership-container table thead tr th{
+.membership-container .membership-table thead tr th{
     background-color: #3d405b;
     color: white;
     padding: 20px 40px;
 }
-.membership-container table tbody tr td{
-    padding: 20px 40px;
+.membership-container .membership-table tbody tr td{
+    padding: 20px;
+    font-weight: bold;
+    text-align: center;
 }
-.membership-container table tbody tr:nth-child(odd){
+.membership-container .membership-table tbody tr td:nth-child(1){
+    text-align: left;
+    color: #212529;
+}
+.membership-container .membership-table tbody tr:nth-child(odd){
     background-color: white;
 }
-.membership-container table tbody tr:nth-child(even){
+.membership-container .membership-table tbody tr:nth-child(even){
     background-color: #f4f1de;
 }
 .fa-circle-check{
@@ -238,7 +439,7 @@ header ul li a:hover{
     margin-top: 10%;
     background-color: #3d405b;
     color: white;
-    padding: 20px;
+    padding: 30px;
     width: 180%;
     border-radius: 20px;
 }
@@ -264,7 +465,7 @@ header ul li a:hover{
     color: white;
     font-size: 16px;
     border: none;
-    padding: 16px 40px;
+    padding: 12px 40px;
     width: 100%;
     border-radius: 20px;
     transition: 0.3s ease-in-out;
@@ -274,27 +475,25 @@ header ul li a:hover{
     background-color: #fb8449;
 }
 .events{
-    padding: 3% 7%;
+    padding: 6% 8%;
     background-color: #f4f1de;
 }
 .events img{
     border-radius: 20px;
 }
-.events h1{
-    font-size: 32px;
+.events .h1{
+    font-size: 36px;
+    font-weight: 700;
 }
 .events .events-container{
-    display: flex;
-    flex-direction: column;
-    column-gap: -100px;
-    width: 100%;
-    height: 100vh;
+    margin-top: 2%;
 }
 .events .events-container .up{
-    padding: 30px;
+    padding: 20px 30px;
     display: flex;
+    gap:3%;
     width: 100%;
-    justify-content: space-between;
+    height: 35vh;
 }
 .events .events-container .up .up-upper{
     display: flex;
@@ -303,36 +502,40 @@ header ul li a:hover{
     gap: 30px;
 }
 .events .calendar{
-    width: 24%;
-    height: 20%;
-    padding: 28px 26px;
-    border-radius: 20px;
-    background-color: #81b29a;
     text-align: center;
+    border-radius: 20px;
+    padding: 20px 60px;
+    max-height: 25%;
+    background-color: #81b29a;
 }
 .events .calendar p{
     font-size: 38px;
+    font-weight: 500;
 }
-.events .calendar h2{
-    margin-top: 6%;
+.events .calendar .h2{
     font-size: 16px;
+    font-weight: 700;
     color: white;
 }
 .events .up-activities{
-    width: 60%;
+    width: 40%;
 }
-.events .up-activities h4{
-    font-size: 22px;
+.events .up-activities .h4{
+    font-size: 26px;
     color: #3d405b;
     font-weight: 500;
     cursor: pointer;
+    transition: 0.1s ease-in-out;
 }
-.events .up-activities h4:hover{
-    color: #fb8449;;
+.events .up-activities .h4:hover{
+    color: #f2cc8f;
 }
 .violet{
     color: #3d405b;
-    font-weight: 7650;
+    font-size: 30px;
+}
+.boldness{
+    font-weight: 600;
 }
 .small-container{
     display: flex;
@@ -368,16 +571,65 @@ header ul li a:hover{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    width: 38%;
+    width: 80%;
     height: 50%;
 }
-.contact-container .top{
+.contact-up{
+    display: flex;
+    gap: 3%;
     width: 100%;
+}
+.contact-up .map{
+    position: relative;
+}
+.contact-up .map-inner{
+    position: absolute;
+    background-color: #3d405b;
+    padding: 20px 35px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+    color: white;
+    bottom: 40%;
+    left: 30%;
+    line-height: 1.7;
+}
+.map button{
+    position: absolute;
+    bottom:25%;
+    left: 30%;
+    padding: 2%;
+    width: 35.3%;
+    background-color: #e07a5f;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: 0.3s ease-in-out;
+}
+.map button:hover{
+    background-color: #edc88d;
+}
+.contact-up .map-inner h4{
+    font-size: 16px;
+    font-weight: 700;
+}
+.contact-up .map-inner .h3{
+    font-size: 18px;
+    font-weight: 500;
+}
+.contact-up .map-inner p{
+    font-weight: 500;
+}
+.contact-container .top{
     display: flex;
     gap: 20px;
 }
 .contact-container input{
-    padding: 16px 30px;
+    padding: 18px 30px;
+    width: 100%;
     border-radius: 50px;
     border: 1px solid grey;
     margin: 5% 0%;
@@ -396,9 +648,9 @@ header ul li a:hover{
     font-size: 16px;
     font-weight: 600;
     border: none;
-    padding: 10px 20px;
+    padding: 15px 20px;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 40px;
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
@@ -407,13 +659,27 @@ header ul li a:hover{
 }
 .contact-down{
     display: flex;
-    justify-content: space-between;
+    gap: 30%;
     margin: 7% 0%;
 }
 .logo-container1{
     display: flex;
-    flex-direction: row;
-    width: 40%;
+    gap: 3%;
+    cursor: pointer;
+}
+.logo-container1 .h2{
+    font-size: 24px;
+    font-weight: 700;
+}
+.logo-container1 .h4{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+}
+.content-container{
+    display: flex;
+    gap: 18%;
+    width: 150%;
 }
 .small-container1{
     width: 100%;
@@ -423,14 +689,37 @@ header ul li a:hover{
     gap:40px
 }
 .fa-brands{
-    font-size: 30px;
+    background-color: #3d405b;
+    color: white;
+    padding: 6% 7%;
+    border-radius: 50%;
+    font-size: 20px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 .fa-brands:hover{
-    color:#81b29a
+    background-color:#81b29a;
 }
 .icons{
     display: flex;
-    gap: 20px;
+    gap: 10px;
+}
+.final-text{
+    display: flex;
+    align-items: center;
+    gap: 2%;
+    font-size: 18px;
+    font-weight: 400;
+}
+.violet1{
+    color: #3d405b;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.violet1:hover{
+    color: #f2cc8f;
+}
+.violet-1{
+    color: #3d405b;
+    font-size: 16px;
 }
