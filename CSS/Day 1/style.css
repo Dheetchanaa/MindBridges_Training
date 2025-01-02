@@ -56,7 +56,7 @@ header ul li a{
     color: white;
     font-weight: 600;
 }
-header ul li a:hover{
+header ul li a :hover{
     color: #edc88d;
 }
 .fa-angle-down:hover{
@@ -139,7 +139,6 @@ header .dropdown:hover .dropdown-content{
     transition: transform 0.4s ease;
     cursor: pointer;
 }
-
 .sidebar-content form .fa-xmark:hover {
     transform: rotate(180deg);
     color:black
@@ -168,6 +167,11 @@ header .dropdown:hover .dropdown-content{
     margin-top: 4%;
     color:#313c3c;
     font-weight: 500;
+    display: flex;
+    gap: 3%;
+}
+.sidebar-content form .check-box div{
+    margin-top: 2%;
 }
 .sidebar-content form .check-box input{
     font-size: 40px;

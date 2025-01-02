@@ -168,9 +168,11 @@ header .dropdown:hover .dropdown-content{
     margin-top: 4%;
     color:#313c3c;
     font-weight: 500;
+    display: flex;
+    gap: 3%;
 }
-.sidebar-content form .check-box input{
-    font-size: 40px;
+.sidebar-content form .check-box div{
+    margin-top: 2%;
 }
 .sidebar-content form button{
     padding: 14px 42px;
