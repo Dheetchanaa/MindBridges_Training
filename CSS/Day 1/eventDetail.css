@@ -277,161 +277,102 @@ header .dropdown:hover .dropdown-content{
 .btn-prime-full:hover{
     background-color: #fb8449;
 }
-.latest-events{
-    margin: 5% 7%;
+.explore{
+    display: flex;
+    margin-top: 5%;
+    margin-left: 30%;
+    flex-direction: column;
 }
-.latest-events h1{
-    font-size: 36px;
+.explore h1{
+    font-size: 34px;
 }
-.latest-events .images{
+.explore .image1{
+    border-radius: 20px;
+    margin-top:5%;
+}
+.explore .p{
+    margin-left: 4%;
+    margin-top: 2%;
+    width: 48%;
+    font-size: 18px;
+    color: gray;
+}
+.explore .h4{
+    margin-left: 4%;
+    font-size: 28px;
     margin-top: 3%;
+    width: 50%;
+}
+.explore .box{
+    background-color: #f4f1de;
+    padding: 40px;
+    width: 40%;
+    margin-top: 2%;
+    margin-left: 3%;
+    border-radius: 20px;
+}
+.box h2{
+    font-weight: 400;
+}
+.box .detail{
     display: flex;
     justify-content: space-between;
 }
-.latest-events .images img{
-    border-radius: 20px;
+.detail p{
+    color:#504660;
+    font-weight: 500;
+}
+.detail h4{
+    color: gray;
+    font-size: 18px;
+    font-weight: 400;
+}
+.map{
     position: relative;
 }
-.latest-events .images .images-down{
-    position: absolute;
-    top: 70pc;
-    display: flex;
-    padding: 20px 0px;
-}
-.images-down h4{
-    background-color: #81b29a;
-    color: white;
-    padding: 10px 100px;
-    border-bottom-left-radius: 20px;
-}
-.images-down button{
-    background-color: #edc88d;
-    color: white;
-    font-weight: 600;
-    padding: 0px 134px;
-    border: none;
-    border-bottom-right-radius: 20px;
-    transition: 0.3s ease-in-out;
-    cursor: pointer;
-}
-.images-down button:hover{
-    background-color: #e07a5f;
-}
-.latest-content{
-    display: flex;
-    column-gap: 5%;
-}
-.latest-content .h1{
-    font-size: 32px;
-    color: #3d405b;
-}
-.latest-content p {
-    font-size: 18px;
-    margin-top: 2%;
-}
-.small{
-    display: flex;
-    column-gap: 26%;
-}
-.small .small-container{
-    width: 25%;
-}
-.grey{
-    color: grey;
-    font-size: 18px;
-}
-.grey1{
-    color: grey;
-    font-size: 18px;
-    line-height: 1.5;
-    margin-top: 1%;
-}
-.events{
-    padding: 6% 8%;
-    background-color: #f4f1de;
-}
-.events img{
-    border-radius: 20px;
-}
-.events .h1{
-    font-size: 36px;
-    font-weight: 700;
-}
-.events .events-container{
-    margin-top: 2%;
-}
-.events .events-container .up{
-    padding: 20px 30px;
-    display: flex;
-    gap:3%;
-    width: 100%;
-    height: 35vh;
-}
-.events .events-container .up .up-upper{
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
-    gap: 30px;
-}
-.events .calendar{
-    text-align: center;
-    border-radius: 20px;
-    padding: 20px 60px;
-    max-height: 25%;
-    background-color: #81b29a;
-}
-.events .calendar p{
-    font-size: 38px;
-    font-weight: 500;
-}
-.events .calendar .h2{
-    font-size: 16px;
-    font-weight: 700;
-    color: white;
-}
-.events .up-activities{
-    width: 40%;
-}
-.events .up-activities .h4{
-    font-size: 26px;
-    color: #3d405b;
-    font-weight: 500;
-    cursor: pointer;
-    transition: 0.1s ease-in-out;
-}
-.events .up-activities .h4:hover{
-    color: #f2cc8f;
-}
-.violet{
-    color: #3d405b;
-    font-size: 30px;
-}
-.boldness{
-    font-weight: 600;
-}
-.small-container{
-    display: flex;
-    justify-content: space-between;
+.map img{
     margin-top: 5%;
 }
-.small-container button{
-    background-color: #f2cc8f;
+.map-inner{
+    position: absolute;
+    background-color: #3d405b;
+    padding: 20px 35px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+    color: white;
+    bottom: 25%;
+    left: 14%;
+    line-height: 1.7;
+}
+.map button{
+    position: absolute;
+    bottom:16%;
+    left: 14%;
+    padding: 10px;
+    width: 24.5%;
+    background-color: #e07a5f;
     color: white;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     border: none;
-    padding: 10px 20px;
-    width: 100%;
-    border-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     transition: 0.3s ease-in-out;
-    cursor: pointer;
 }
-.events .small-container button:hover{
-    background-color: #fb8449;
+.map button:hover{
+    background-color: #edc88d;
 }
-.bg{
-    border-radius: 20px;
-    background-color: white;
+.map-inner h4{
+    font-size: 16px;
+    font-weight: 700;
+}
+.map-inner .h3{
+    font-size: 18px;
+    font-weight: 500;
+}
+.map-inner p{
+    font-weight: 500;
 }
 .contact{
     padding: 3% 7%;
@@ -446,10 +387,49 @@ header .dropdown:hover .dropdown-content{
     width: 80%;
     height: 50%;
 }
+.contact-up{
+    display: flex;
+    gap: 3%;
+    width: 100%;
+}
+.contact-container .top{
+    display: flex;
+    gap: 20px;
+}
+.contact-container input{
+    padding: 18px 30px;
+    width: 100%;
+    border-radius: 50px;
+    border: 1px solid grey;
+    margin: 5% 0%;
+    font-size:14px;
+}
+.contact-container textarea{
+    padding: 16px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    width:"5%";
+    font-size:14px;
+}
+.contact-container button{
+    background-color: #f2cc8f;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    padding: 15px 20px;
+    width: 100%;
+    border-radius: 40px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.contact-container button:hover{
+    background-color: #fb8449;
+}
 .contact-down{
     display: flex;
     gap: 30%;
-    margin: 5% 0%;
+    margin: 7% 0%;
 }
 .logo-container1{
     display: flex;
@@ -500,6 +480,10 @@ header .dropdown:hover .dropdown-content{
     font-size: 18px;
     font-weight: 400;
 }
+.violet{
+    color: #3d405b;
+    font-size: 30px;
+}
 .violet1{
     color: #3d405b;
     cursor: pointer;
@@ -511,4 +495,11 @@ header .dropdown:hover .dropdown-content{
 .violet-1{
     color: #3d405b;
     font-size: 16px;
+}
+.grey{
+    color: grey;
+    font-size: 18px;
+}
+.boldness{
+    font-weight: 600;
 }

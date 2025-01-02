@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiya Golf Club</title>
+    <link rel="stylesheet" href="eventDetail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container"> 
+            <img src="Documents/logo.png" width="15%" height="15%">
+            <div class="tiya-container">
+                <p class="size1">Tiya</p>
+                <p class="size2">Golf club</p>
+            </div>
+        </div>
+        <div class="right-header">
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#About">About</a></li>
+                <li><a href="index.html#Membership">Membership</a></li>
+                <li><a href="index.html#Events">Events</a></li>
+                <li><a href="index.html#Contact us">Contact us</a></li>
+                <li class="dropdown">
+                        <a href="index.html#Pages">Pages</a> <i class="fa-solid fa-angle-down"></i>
+                        <div class="dropdown-content">
+                            <div>
+                                <a href="eventListing.html">Event Listing</a>
+                            </div>
+                            <div>
+                                <a href="eventDetail.html"> Event Detail</a>
+                            </div>
+                        </div>
+                </li>
+                </ul>
+                <div class="sidebar">
+                    <div>
+                        <button class="btn-prime" onclick="sidebarOpen()">Member Login</button>
+                    </div>
+                </div>
+                <div class="sidebar-content" id="sidebarContent">
+                    <form action="">
+                        <div class="top">
+                            <p class="p">Member Login</p>
+                            <i class="fa-solid fa-xmark" onclick="sidebarClose()"></i>
+                        </div>
+                        <br>
+                        <label>Membership no.</label>
+                        <input type="text" placeholder="11002560">
+                        <label>Password</label>
+                        <input type="text" placeholder="Password">
+                        <div class="check-box">
+                            <input type="checkbox">Remember me
+                        </div>
+                        <center><button>Login</button></center><br>
+                        <center><a href="">Forgotten password?</a></center>
+                        <div class="bottom">
+                            <h4>Any Questions?</h4>
+                            <a>010-020-0340</a>
+                        </div>
+                    </form>
+                </div>
+        </div>
+    </header>
+    <section id="Home" class="home">
+        <div class="overlay"></div>
+        <div class="home1">
+            <div class="left">
+                <h1>Event Detail</h1>
+                <div class="down">
+                    <button class="btn-prime-full"><a href="#explore">Learn more</a></button>
+                </div>
+            </div>
+        </div>   
+    </section>
+    <section id="explore" class="explore">
+        <h1>Tiya Club's Group Tournaments</h1>
+        <img src="https://templatemo.com/templates/templatemo_587_tiya_golf_club/images/professional-golf-player.jpg" width="60%" height="60%" class="image1">
+        <p class="h4">Golf Club based in Orlando</p>
+        <p class="p">Tiya Golf Club is Bootstrap v5.3.0 HTML CSS template for your golf related websites. Anyone can download, edit and use this layout for commercial purposes.<br><br>
+            Tiya is 100% free CSS template provided by TemplateMo website. Please tell your friends about our website. Thank you for visiting.</p>
+            <div class="box">
+                <h2>Event Detail</h2><br>
+                <div class="detail">
+                    <div>
+                        <p>Date:</p>
+                        <h4>18 Mar 2048</h4>
+                    </div>
+                    <div>
+                        <p>Location:</p>
+                        <h4>Tiya Golf Club</h4>
+                    </div>
+                    <div>
+                        <p>Ticket:</p>
+                        <h4>$150</h4>
+                    </div>
+                </div>
+            </div>
+        <div class="map">
+            <img src="https://templatemo.com/templates/templatemo_587_tiya_golf_club/images/WorldMap.svg" width="50%" height="50%">
+            <div class="map-inner">
+                <h4>London, United Kingdom</h4>
+                <p class="h3">(020) 010-020-0340</p>
+                <p>info@company.com</p>
+            </div>
+            <button>Directions</button>
+        </div>
+    </section>
+        <section id="Contact us" class="contact">
+            <div class="contact-down">
+                <div class="logo-container1"> 
+                    <img src="Documents/logo.png" width="15%" height="24%">
+                    <div class="tiya-container">
+                        <p class="h2">Tiya</p>
+                        <p class="h4">Golf club</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="violet">Join us</p>
+                    <div class="content-container">
+                    <div>
+                        <div class="small-container1">
+                            <div>
+                                <p class="grey boldness">Mon-Fri</p>
+                                <br><br>
+                                <p class="grey boldness">Sat-Sun</p>
+                            </div>
+                            <div>
+                                <p class="grey">6:00 AM - 6:00 PM</p>
+                                <br><br>
+                                <p class="grey">6:30 AM - 8:30 PM</p>
+                            </div>
+                        </div>
+                        <br><br>
+                        <p class="grey">Copyright © 2048 Tiya Golf Club</p>
+                    </div>
+                    <div>
+                        <div class="icons">
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>   
+                        <br>
+                        <div class="final-text">
+                            <p class="grey">Design: </p>
+                            <p class="violet1">TemplateMo</p>
+                        </div>
+                        
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+</body>
+<script src="script.js"></script>
+</html>
