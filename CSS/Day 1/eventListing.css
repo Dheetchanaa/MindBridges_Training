@@ -311,6 +311,11 @@ header .dropdown:hover .dropdown-content{
     padding: 0px 134px;
     border: none;
     border-bottom-right-radius: 20px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.images-down button:hover{
+    background-color: #e07a5f;
 }
 .latest-content{
     display: flex;
