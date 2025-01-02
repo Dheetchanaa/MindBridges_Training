@@ -11,7 +11,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5% 7%;
+    padding: 1% 7%;
     width: 100%;
     background-color: #3d405b;
     color: white;
@@ -56,7 +56,7 @@ header ul li a{
     color: white;
     font-weight: 600;
 }
-header ul li a :hover{
+header ul li a:hover{
     color: #edc88d;
 }
 .fa-angle-down:hover{
@@ -108,6 +108,9 @@ header .dropdown:hover .dropdown-content{
 .btn-prime:hover{
     background-color: #edc88d;
     color: white;
+}
+.membershipsvg{
+    margin-left: -10%;
 }
 .sidebar-content {
     position: absolute;
@@ -229,23 +232,31 @@ header .dropdown:hover .dropdown-content{
     width: 100%;
     height: 100vh;
 }
+.home svg{
+    position: relative;
+}
 .exchange {
     display: inline;
     color: #f2cc8f;
 }
 .overlay{
     width: 100%;
-    height: 100%;
+    height: 90%;
     position: absolute;
     background-color: #3d405b;
     opacity: 0.5;
+    margin-top: -18%;
+}
+.svg2{
+    margin-top: 4%;
 }
 .home1{
     position: absolute;
     display: flex;
-    gap:20%;
-    margin: 12% 8%;
+    justify-content: space-between;
+    margin: -10% 8% 0%;
     color: white;
+    height: 70vh;
 }
 .home1 .left{
     width: 30%;
@@ -264,6 +275,7 @@ header .dropdown:hover .dropdown-content{
     font-size: 36px;
     line-height: 1.5;
     color: white;
+    position: relative;
 }
 .btn-prime-full{
     background-color: #edc88d;
@@ -291,7 +303,7 @@ header .dropdown:hover .dropdown-content{
     border-radius: 20px;
 }
 .about{
-    margin:5% 7%;
+    margin:0% 7% 4%;
 }
 .about h1{
     font-size: 34px;
@@ -343,16 +355,20 @@ header .dropdown:hover .dropdown-content{
     background-image: url("	https://templatemo.com/templates/templatemo_587_tiya_golf_club/images/frederik-rosar-NDSZcCfnsbY-unsplash.jpg");
     background-position: center;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     position: relative;
+}
+.newsletterSvg2{
+    transform: rotate(180deg);
+    margin-top:20.3%;
 }
 .newsletter .container{
     background-color: rgba(254, 239, 229, 0.7);
     width: 35%;
-    height: 30%;
+    height: 35%;
     border-radius: 20px;
-    margin: 8%;
-    padding: 50px;
+    margin: 0% 8%;
+    padding: 40px 40px 50px;
     position: absolute;
 }
 .newsletter .container h1{
@@ -571,6 +587,7 @@ header .dropdown:hover .dropdown-content{
 }
 .contact{
     padding: 3% 7%;
+    height: 70vh;
 }
 .contact h1{
     font-size: 34px;
@@ -730,4 +747,7 @@ header .dropdown:hover .dropdown-content{
 .violet-1{
     color: #3d405b;
     font-size: 16px;
+}
+.footersvg{
+    margin-bottom: -10%;
 }
