@@ -239,12 +239,11 @@ header .dropdown:hover .dropdown-content{
 .home1{
     position: absolute;
     display: flex;
-    gap:20%;
     margin: 12% 8%;
     color: white;
 }
-.home1 .left{
-    width: 30%;
+.home1 .left h1{
+    font-size: 80%;
 }
 .home1 .left .down{
     display: flex;
@@ -252,9 +251,7 @@ header .dropdown:hover .dropdown-content{
     align-items: center;
     width: 70%;
     padding: 8% 0%;
-}
-.home1 .left .down p{
-    font-weight: 600;
+    margin-top: 5%;
 }
 .home1 .left h1{
     font-size: 36px;
@@ -280,24 +277,59 @@ header .dropdown:hover .dropdown-content{
 .btn-prime-full:hover{
     background-color: #fb8449;
 }
-.home1 .right{
-    width: 50%;
+.latest-events{
+    margin: 5% 7%;
 }
-.home1 .right iframe{
-    border-radius: 20px;
+.latest-events h1{
+    font-size: 36px;
 }
-.about{
-    margin:5% 7%;
-}
-.about h1{
-    font-size: 34px;
-}
-.about .about-container{
+.latest-events .images{
+    margin-top: 3%;
     display: flex;
-    align-items: center;
-    column-gap: 10%;
-    line-height: 2;
-    margin-top: 5%;
+    justify-content: space-between;
+}
+.latest-events .images img{
+    border-radius: 20px;
+    position: relative;
+}
+.latest-events .images .images-down{
+    position: absolute;
+    top: 70pc;
+    display: flex;
+    padding: 20px 0px;
+}
+.images-down h4{
+    background-color: #81b29a;
+    color: white;
+    padding: 10px 100px;
+    border-bottom-left-radius: 20px;
+}
+.images-down button{
+    background-color: #edc88d;
+    color: white;
+    font-weight: 600;
+    padding: 0px 134px;
+    border: none;
+    border-bottom-right-radius: 20px;
+}
+.latest-content{
+    display: flex;
+    column-gap: 5%;
+}
+.latest-content .h1{
+    font-size: 32px;
+    color: #3d405b;
+}
+.latest-content p {
+    font-size: 18px;
+    margin-top: 2%;
+}
+.small{
+    display: flex;
+    column-gap: 26%;
+}
+.small .small-container{
+    width: 25%;
 }
 .grey{
     color: grey;
@@ -308,175 +340,6 @@ header .dropdown:hover .dropdown-content{
     font-size: 18px;
     line-height: 1.5;
     margin-top: 1%;
-}
-.about .about-container .up{
-    width: 70%;
-    height: 100%;
-}
-.about .about-container .up .h2{
-    font-size: 28px;
-    font-weight: 500;
-    text-transform: capitalize;
-}
-.about .about-container .down{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    column-gap: 2px;
-}
-.about .about-container .down h2{
-    font-weight: 500;
-}
-.about .about-container .down img{
-    border-radius: 20px;
-}
-.about .about-container .down .caption{
-    display: flex;
-    gap:44%;
-    align-items: center;
-}
-.newsletter{
-    background-image: url("	https://templatemo.com/templates/templatemo_587_tiya_golf_club/images/frederik-rosar-NDSZcCfnsbY-unsplash.jpg");
-    background-position: center;
-    width: 100%;
-    height: 100vh;
-    position: relative;
-}
-.newsletter .container{
-    background-color: rgba(254, 239, 229, 0.7);
-    width: 35%;
-    height: 30%;
-    border-radius: 20px;
-    margin: 8%;
-    padding: 50px;
-    position: absolute;
-}
-.newsletter .container h1{
-    font-size: 34px;
-}
-.newsletter .container p{
-    font-size: 20px;
-    line-height: 1.5;
-    color: gray;
-}
-.back-container{
-    background-color: white;
-    margin-top: 5%;
-    padding: 10px 20px;
-    border-radius: 50px;
-    max-width: 85%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.back-container input{
-    border: none;
-    font-size: 20px;
-    outline: none;
-}
-.fa-envelope{
-    font-size: 20px;
-}
-.back-container button{
-    border: none;
-    padding: 15px 30px;
-    border-radius: 50px;
-    background-color: #f2cc8f;
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-}
-.back-container button:hover{
-    background-color: #fb8449;
-}
-.membership{
-    margin: 5% 7%;
-}
-.membership h1{
-    font-size: 34px;
-}
-.membership-container{
-    display: flex;
-    column-gap: 7%;
-    margin-top: 4%;
-}
-.membership-container p{
-    font-size: 24px;
-    font-weight: 500;
-}
-.membership-container .membership-table{
-    border-collapse: collapse;
-    margin-top: 5%;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    overflow: hidden;
-}
-.membership-container .membership-table thead tr th{
-    background-color: #3d405b;
-    color: white;
-    padding: 20px 40px;
-}
-.membership-container .membership-table tbody tr td{
-    padding: 20px;
-    font-weight: bold;
-    text-align: center;
-}
-.membership-container .membership-table tbody tr td:nth-child(1){
-    text-align: left;
-    color: #212529;
-}
-.membership-container .membership-table tbody tr:nth-child(odd){
-    background-color: white;
-}
-.membership-container .membership-table tbody tr:nth-child(even){
-    background-color: #f4f1de;
-}
-.fa-circle-check{
-    color: #81b29a;
-}
-.fa-circle-xmark{
-    color: #e07a5f;
-}
-.form-container{
-    margin-top: 10%;
-    background-color: #3d405b;
-    color: white;
-    padding: 30px;
-    width: 180%;
-    border-radius: 20px;
-}
-.form-container .form-inputs{
-    display: flex;
-    margin-top: 3%;
-    gap: 20px;
-    flex-direction: column;
-}
-.form-container .form-inputs input{
-    padding: 20px 30px;
-    width: 88%;
-    border-radius: 50px;
-    border: none;
-}
-.form-container .form-inputs textarea{
-    width: 88%;
-    padding: 20px 30px;
-    border-radius: 20px;
-}
-.form-container .form-inputs button{
-    background-color: #f2cc8f;
-    color: white;
-    font-size: 16px;
-    border: none;
-    padding: 12px 40px;
-    width: 100%;
-    border-radius: 20px;
-    transition: 0.3s ease-in-out;
-    cursor: pointer;
-}
-.form-container .form-inputs button:hover{
-    background-color: #fb8449;
 }
 .events{
     padding: 6% 8%;
