@@ -1,0 +1,203 @@
+*{
+    margin:0;
+}
+body{
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    width: 100%;
+    height: 100vh;
+}
+.home{
+    background-image: url("Documents/shophome.jpg");
+    border-bottom-right-radius: 150px;
+    border-bottom-left-radius: 150px;
+    height: 56vh;
+}
+.home .home-content{
+    padding: 13%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.home .home-content h1{
+    text-transform: uppercase;
+    font-size: 44px;
+    font-weight: 700;
+}
+.home .home-content nav{
+    margin-top: 2%;
+    color: white;
+}
+.home .home-content nav ol li{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+.home .home-content nav ol li a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+header{
+    position: absolute;
+    z-index: 1;
+    padding: 1% 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width:100%;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    background-color: #0071f8;
+}
+header img{
+    padding-left: 6%;
+    cursor: pointer;
+}
+header ul {
+    padding-right: 6%;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    align-items: center;
+}
+header ul li{
+    display: inline-block;
+}
+header ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 350;
+    padding: 8px 16px;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+}
+header ul li .a1{
+    background-color: #1a89f9;
+}
+header ul li a:hover{
+    background-color: #1a89f9;
+}
+header ul button{
+    background-color: #ee626b;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-top: 1%;
+    cursor: pointer;
+}
+header ul button a{
+    text-decoration: none;
+    color: white;
+}
+.home-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-us{
+    margin: 8%;
+    display: flex;
+    justify-content: space-between;
+}
+.contact-us .contact-left{
+    background-color: #f7f7f7;
+    width: 48%;
+    height: 85vh;
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    margin-top: 5%;
+}
+.contact-us .contact-left .head h6{
+    color: #ee626b;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.contact-us .contact-left .head h1{
+    margin-top: 3%;
+    font-weight: 700;
+}
+.contact-us .contact-left .downs p{
+    color: #b0acab;
+}
+.contact-us .contact-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 103vh;
+}
+.contact-us .contact-right iframe{
+    border-radius: 20px;
+}
+.contact-us .contact-right form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 50vh;
+}
+.contact-us .contact-right form div{
+    display: flex;
+    justify-content: space-between;
+}
+.contact-us .contact-right form div input{
+    width: 47%;
+    padding: 12px 20px;
+    border-radius: 30px;
+    background-color: #f7f7f7;
+    border: 1px solid #b0acab;
+}
+.contact-us .contact-right form div input:focus-within{
+    border: 1px solid black;
+}
+.contact-us .contact-right form textarea{
+    padding: 15px 20px;
+    border-radius: 30px;
+    background-color: #f7f7f7;
+    border: 1px solid #b0acab;
+}
+.contact-us .contact-right form button{
+    background-color: #ee626b;
+    width: 35%;
+    padding: 13px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    transition: 0.3s ease-in-out;
+}
+.contact-us .contact-right form button:hover{
+    background-color: #0071f8;
+}
+footer{
+    position: absolute;
+    background-image: url("Documents/footer-bg.jpg");
+    padding: 30px 90px 80px;
+    text-align: center;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 3%;
+    width: 100%;
+    margin-bottom: -10%;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+footer a:hover{
+    color: gainsboro;
+}

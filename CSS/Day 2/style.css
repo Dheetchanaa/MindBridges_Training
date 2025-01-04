@@ -1,0 +1,716 @@
+*{
+    margin:0;
+}
+body{
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    width: 100%;
+    height: 100vh;
+}
+.home{
+    background-image: url("Documents/banner-bg.jpg");
+    border-bottom-right-radius: 150px;
+    border-bottom-left-radius: 150px;
+    height: 130vh;
+}
+header{
+    position: absolute;
+    z-index: 1;
+    padding: 1% 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width:100%;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    background-color: #0071f8;
+}
+header img{
+    padding-left: 6%;
+    cursor: pointer;
+}
+header ul {
+    padding-right: 6%;
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    align-items: center;
+}
+header ul li{
+    display: inline-block;
+}
+header ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 350;
+    padding: 8px 16px;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+}
+header ul li .a1{
+    background-color: #1a89f9;
+}
+header ul li a:hover{
+    background-color: #1a89f9;
+}
+header ul button{
+    background-color: #ee626b;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-top: 1%;
+    cursor: pointer;
+}
+header ul button a{
+    text-decoration: none;
+    color: white;
+}
+.home-container{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+.home-left-container{
+    padding: 20% 8%;
+    width: 50%;
+    color: white;
+}
+.home-left-container h5{
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.home-left-container h1{
+    font-size: 46px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.home-left-container p{
+    line-height: 2;
+    font-size: 15px;
+}
+.home-left-container div{
+    background-color: white;
+    width: 70%;
+    height: 14%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.home-left-container .caption-image{
+    margin-left: 20%;
+}
+.home-left-container div input{
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    outline: none;
+}
+.home-left-container div button{
+    background-color: #ee626b;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    width: 35%;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.home-left-container div button a{
+    text-decoration: none;
+    color: white;
+}
+.home-left-container div button:hover{
+    background-color: #008af8;
+}
+.home-right-container{
+    padding: 16% 8%;
+}
+.home-right-container img{
+    position: relative;
+    border-radius: 20px;
+}
+.home-right-container #dollar{
+    position: absolute;
+    background-color: #008af8;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    top: 35%;
+    right: 9%;
+    padding: 8px 14px;
+    border-radius: 50px;
+}
+.home-right-container #offer{
+    position: absolute;
+    background-color: #ee626b;
+    color: white;
+    font-size: 26px;
+    font-weight: 800;
+    top: 93%;
+    right: 30%;
+    padding: 30px 15px;
+    border-radius: 50%;
+}
+.home-down-container{
+    display: flex;
+    gap: 2%;
+    width: 90%;
+    margin: 0% 7%;
+}
+.home-down-container div{
+    margin-top: -10%;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    width: 17%;
+    height: 17vh;
+    padding: 30px;  
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.home-down-container div h3{
+    text-transform: uppercase;
+    text-align: center;
+}
+.home-down-container div .icons{
+    background-color: #0071f8;
+    border-radius: 50%;
+    margin-top: 5%;
+    width: 15%;
+    height: 28%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+.home-down-container div .icons img{
+    width: 50px;
+    height: 50px;
+}
+.home-down-container div:hover .icons{
+    background-color: #ee626b;
+}
+.home-down-container div:hover h3{
+    color:#1e1e1e
+}
+.trending-games{
+    padding: 14% 7% 7%;
+    font-family: 'Poppins', sans-serif;
+}
+.trending-games .trending-games-up{
+    display: flex;
+    justify-content: space-between;
+}
+.trending-games .trending-games-up .trending-games-up-left h5{
+    text-transform: uppercase;
+    color: #ee626b;
+    font-weight: 800;
+}
+.trending-games .trending-games-up .trending-games-up-left h1{
+    font-size: 36px;
+    font-weight: 800;
+    color:#1e1e1e;
+}
+.trending-games .trending-games-up .trending-games-up-right{
+    margin-top: 3%;
+}
+.trending-games .trending-games-up .trending-games-up-right button{
+    padding: 15px 25px;
+    background-color: #ee626b;
+    border-radius: 50px;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+.trending-games .trending-games-up .trending-games-up-right button:hover{
+    background-color: #008af8;
+}
+.trending-games .trending-games-up .trending-games-up-right button a{
+    text-decoration: none;
+    color: white;
+}
+.trending-games .trending-games-images{
+    margin: 5% 0%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.trending-games .trending-games-images .images-prices1{
+    position: absolute;
+    top: 7%;
+    left: 16%;
+    background-color: #008af8;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: right;
+}
+.trending-games .trending-games-images .images-prices2{
+    position: absolute;
+    top: 7%;
+    left: 42%;
+    background-color: #008af8;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: right;
+}
+.trending-games .trending-games-images .images-prices3{
+    position: absolute;
+    top: 7%;
+    right: 27%;
+    background-color: #008af8;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: right;
+}
+.trending-games .trending-games-images .images-prices4{
+    position: absolute;
+    top: 7%;
+    right: 1%;
+    background-color: #008af8;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: right;
+}
+.trending-games .trending-games-images .images-prices1 strike{
+    font-size: 14px;
+}
+.trending-games .trending-games-images .images-prices3 strike{
+    font-size: 14px;
+}
+.trending-games .trending-games-images img{
+    border-radius: 20px;
+}
+.trending-games .trending-games-images .images-down{
+    background-color: #eeeeee;
+    border-radius: 20px;
+}
+.trending-games .trending-games-images .images-down div{
+    padding: 10px 20px;
+}
+.trending-games .trending-games-images .images-down div p{
+    font-size: 14px;
+    color: gray;
+}
+.trending-games .trending-games-images .images-down div h3{
+    margin-top: 3%;
+    transition: 0.3s ease-in-out;
+}
+.trending-games .trending-games-images .images-down .image-caption{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.trending-games .trending-games-images .images-down .image-caption .fa-bag-shopping{
+    padding: 12px;
+    background-color: #ee626b;
+    color: white;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.trending-games .trending-games-images .images-down:hover .fa-bag-shopping{
+    background-color: #008af8;
+}
+.trending-games .trending-games-images .images-down:hover .image-caption h3{
+    color: #008af8;
+}
+.top-games{
+    padding: 5% 7%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    border-radius: 150px;
+}
+.top-games .top-games-up{
+    display: flex;
+    justify-content: space-between;
+}
+.top-games .top-games-up .top-games-up-left h5{
+    text-transform: uppercase;
+    color: #ee626b;
+    font-weight: 800;
+}
+.top-games .top-games-up .top-games-up-left h1{
+    font-size: 36px;
+    font-weight: 800;
+    color:#1e1e1e;
+}
+.top-games .top-games-up .top-games-up-right{
+    margin-top: 3%;
+}
+.top-games .top-games-up .top-games-up-right button{
+    padding: 15px 25px;
+    background-color: #ee626b;
+    border-radius: 50px;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+.top-games .top-games-up .top-games-up-right button:hover{
+    background-color: #008af8;
+}
+.top-games .top-games-up .top-games-up-right button a{
+    text-decoration: none;
+    color: white;
+}
+.top-games .top-games-images{
+    margin: 5% 0%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.top-games .top-games-images .images-prices{
+    position: absolute;
+    top: 7%;
+    left: 16%;
+    background-color: #008af8;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: right;
+}
+.top-games .top-games-images img{
+    border-radius: 20px;
+}
+.top-games .top-games-images .images-down{
+    background-color: white;
+    border-radius: 20px;
+    width: 14.7%;
+    height: 41vh;
+}
+.top-games .top-games-images .images-down div{
+    padding: 10px 20px;
+}
+.top-games .top-games-images .images-down div p{
+    font-size: 14px;
+    color: gray;
+}
+.top-games .top-games-images .images-down div h3{
+    margin-top: 3%;
+    transition: 0.3s ease-in-out;
+}
+.top-games .top-games-images .images-down .image-caption{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-games .top-games-images .images-down .image-caption div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 150%;
+    align-items: center;
+}
+.top-games .top-games-images .images-down .image-caption h1{
+    padding: 8px 0px;
+    width: 8%;
+    background-color: #ee626b;
+    color: white;
+    border-radius: 50px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    top: 95%;
+    left: 3.5%;
+    cursor: pointer;
+}
+.top-games .top-games-images .images-down:hover h1{
+    background-color: #008af8;
+}
+.top-games .top-games-images .images-down .image-caption h2{
+    padding: 8px 0px;
+    width: 8%;
+    background-color: #ee626b;
+    color: white;
+    border-radius: 50px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    top: 95%;
+    left: 20.5%;
+    cursor: pointer;
+}
+.top-games .top-games-images .images-down:hover h2{
+    background-color: #008af8;
+}
+.top-games .top-games-images .images-down .image-caption h5{
+    padding: 8px 0px;
+    width: 8%;
+    background-color: #ee626b;
+    color: white;
+    border-radius: 50px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    top: 95%;
+    left: 37.5%;
+    cursor: pointer;
+}
+.top-games .top-games-images .images-down:hover h5{
+    background-color: #008af8;
+}
+.top-games .top-games-images .images-down .image-caption h4{
+    padding: 8px 0px;
+    width: 8%;
+    background-color: #ee626b;
+    color: white;
+    border-radius: 50px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    top: 95%;
+    right:37.5%;
+    cursor: pointer;
+}
+.top-games .top-games-images .images-down:hover h4{
+    background-color: #008af8;
+}
+.top-games .top-games-images .images-down .image-caption span{
+    padding: 8px 0px;
+    width: 8%;
+    background-color: #ee626b;
+    color: white;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    top: 95%;
+    right:20%;
+    cursor: pointer;
+}
+.top-games .top-games-images .images-down:hover span{
+    background-color: #008af8;
+}
+.top-games .top-games-images .images-down .image-caption h6{
+    padding: 8px 0px;
+    width: 8%;
+    background-color: #ee626b;
+    color: white;
+    border-radius: 50px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    top: 95%;
+    right:3%;
+    cursor:pointer
+}
+.top-games .top-games-images .images-down:hover h6{
+    background-color: #008af8;
+}
+.top-games .top-games-images .images-down:hover .image-caption h3{
+    color: #008af8;
+}
+.top-games .top-games-images .images-down .image-caption h3{
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+}
+.top-categories{
+    margin: 7% 0% 5%;
+}
+.top-categories .top-categories-up {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+.top-categories .top-categories-up .top-categories-up-center h5{
+    text-transform: uppercase;
+    color: #ee626b;
+    font-weight: 800;
+}
+.top-categories .top-categories-up .top-categories-up-center h1{
+    font-size: 36px;
+    font-weight: 800;
+    color:#1e1e1e;
+}
+.top-categories .top-categories-images{
+    padding: 5% 3%;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+.top-categories .top-categories-images .images-down{
+    height: 42vh;
+    background-color: #0071f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    margin:0;
+    padding: 0;
+}
+.top-categories .top-categories-images .images-down h3{
+    color: white;
+    text-align: center;
+    padding: 7% 0%;
+}
+.top-categories .top-categories-images .images-down img{
+    border-radius: 20px;
+    margin-top: 5%;
+}
+.shop-newsletter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shop-newsletter .image img{
+    border-radius: 20px;
+    position: relative;
+}
+.shop-newsletter .shop{
+    position: absolute;
+    left: 10%;
+    top: 453%;
+    background-color: #f7f7f7;
+    padding: 5%;
+    width: 23%;
+    height: 50vh;
+    border-radius: 20px;
+}
+.shop-newsletter .shop h4{
+    color: #ee626b;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800;
+}
+.shop-newsletter .shop h1{
+    font-size: 38px;
+}
+.shop-newsletter .shop h1 span{
+    color:#0071f8
+}
+.shop-newsletter .shop p{
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.8;
+    color: #58514a;
+}
+.shop-newsletter .shop button{
+    padding: 15px 30px;
+    background-color: #ee626b;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+}
+.shop-newsletter .shop button:hover{
+    background-color: #0071f8;
+}
+.shop-newsletter .shop button a{
+    text-decoration: none;
+    color: white;
+}
+.newsletter{
+    position: absolute;
+    right: 10%;
+    top: 465%;
+    background-color: #f7f7f7;
+    padding: 5%;
+    width: 23%;
+    height: 38vh;
+    border-radius: 20px;
+}
+.newsletter h4{
+    color: #ee626b;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800;
+}
+.newsletter h1{
+    font-size: 38px;
+}
+.newsletter h1 span{
+    color:#0071f8;
+}
+.newsletter div{
+    padding-left: 20px;
+    background-color: white;
+    border-radius: 50px;
+    width: 103%;
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+.newsletter div:focus-within{
+    outline: 4px solid #97c2f7;
+}
+.newsletter div input{
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+.newsletter div button{
+    padding: 15px;
+    background-color: #ee626b;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+}
+.newsletter div button:hover{
+    background-color: #0071f8;
+}
+.newsletter div button a{
+    text-decoration: none;
+    color: white;
+}
+footer{
+    background-image: url("Documents/footer-bg.jpg");
+    padding: 30px 90px 90px;
+    text-align: center;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 16%;
+    margin-bottom: -10%;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+footer a:hover{
+    color: gainsboro;
+}
