@@ -249,42 +249,15 @@ header ul button a{
     justify-content: space-between;
     position: relative;
 }
-.trending-games .trending-games-images .images-prices1{
-    position: absolute;
-    top: 7%;
-    left: 16%;
-    background-color: #008af8;
-    padding: 10px 20px;
-    border-radius: 10px;
-    color: white;
-    text-align: right;
+.trending-games .trending-games-images .images-down{
+    position: relative;
 }
-.trending-games .trending-games-images .images-prices2{
+.trending-games .trending-games-images .images-prices{
     position: absolute;
-    top: 7%;
-    left: 42%;
+    top: 20px;
+    right: 20px;
     background-color: #008af8;
-    padding: 10px 20px;
-    border-radius: 10px;
-    color: white;
-    text-align: right;
-}
-.trending-games .trending-games-images .images-prices3{
-    position: absolute;
-    top: 7%;
-    right: 27%;
-    background-color: #008af8;
-    padding: 10px 20px;
-    border-radius: 10px;
-    color: white;
-    text-align: right;
-}
-.trending-games .trending-games-images .images-prices4{
-    position: absolute;
-    top: 7%;
-    right: 1%;
-    background-color: #008af8;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 10px;
     color: white;
     text-align: right;

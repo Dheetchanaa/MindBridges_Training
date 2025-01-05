@@ -34,179 +34,445 @@
     <section class="game-images">
         <div class="game-images-header">
             <ul>
-                <li class="li">Show all</li>
-                <li>Adventure</li>
-                <li>Strategy</li>
-                <li>Racing</li>
+                <li class="active" onclick="changeContent(event)" id="showall">Show all</li>
+                <li onclick="changeContent(event)" id="adventure">Adventure</li>
+                <li onclick="changeContent(event)" id="strategy">Strategy</li>
+                <li onclick="changeContent(event)" id="racing">Racing</li>
             </ul>
         </div>
-            <div class="trending-games-images">
-                <div class="images-down">
-                    <div class="images-prices">
-                        <strike class="strike">$36</strike>
-                        <h5>$24</h5>
-                    </div>
-                    <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-05.jpg" width="300" height="225"></a>
-                    <div class="image-caption">
-                        <div>
-                            <p>Action</p>
-                            <h3>Assasin Creed</h3>
+            <div class="content active" id="show-images">
+                <div class="trending-games-images">
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$36</strike>
+                            <h5>$24</h5>
                         </div>
-                        <i class="fa-solid fa-bag-shopping"></i>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-05.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$32</strike>
+                            <h5>$22</h5>
+                        </div>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-03.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$45</strike>
+                            <h5>$30</h5>
+                        </div>
+                        <a href="productDetails.html"><img src="	https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-04.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$32</strike>
+                            <h5>$22</h5>
+                        </div>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/trending-04.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$38</strike>
+                            <h5>$26</h5>
+                        </div>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-04.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$30</strike>
+                            <h5>$20</h5>
+                        </div>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-05.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$32</strike>
+                            <h5>$22</h5>
+                        </div>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/trending-04.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$32</strike>
+                            <h5>$22</h5>
+                        </div>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-03.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$28</strike>
+                            <h5>$20</h5>
+                        </div>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-04.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$26</strike>
+                            <h5>$18</h5>
+                        </div>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/trending-04.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$32</strike>
+                            <h5>$24</h5>
+                        </div>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-05.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$45</strike>
+                            <h5>$30</h5>
+                        </div>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-03.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="images-down">
-                    <div class="images-prices">
-                        <strike class="strike">$32</strike>
-                        <h5>$22</h5>
-                    </div>
-                    <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-03.jpg" width="300" height="225"></a>
-                    <div class="image-caption">
-                        <div>
-                            <p>Action</p>
-                            <h3>Assasin Creed</h3>
+            </div>
+            <div class="content" id="adventure-images">
+                <div class="trending-games-images">
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$36</strike>
+                            <h5>$24</h5>
                         </div>
-                        <i class="fa-solid fa-bag-shopping"></i>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-05.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$45</strike>
+                            <h5>$30</h5>
+                        </div>
+                        <a href="productDetails.html"><img src="	https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-04.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$30</strike>
+                            <h5>$20</h5>
+                        </div>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-05.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$32</strike>
+                            <h5>$22</h5>
+                        </div>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-03.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$28</strike>
+                            <h5>$20</h5>
+                        </div>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-04.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$32</strike>
+                            <h5>$24</h5>
+                        </div>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-05.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="images-down">
-                    <div class="images-prices">
-                        <strike class="strike">$45</strike>
-                        <h5>$30</h5>
-                    </div>
-                    <a href="productDetails.html"><img src="	https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-04.jpg" width="300" height="225"></a>
-                    <div class="image-caption">
-                        <div>
-                            <p>Action</p>
-                            <h3>Assasin Creed</h3>
+            </div>
+            <div class="content" id="strategy-images">
+                <div class="trending-games-images">
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$32</strike>
+                            <h5>$22</h5>
                         </div>
-                        <i class="fa-solid fa-bag-shopping"></i>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-03.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$32</strike>
+                            <h5>$22</h5>
+                        </div>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/trending-04.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$38</strike>
+                            <h5>$26</h5>
+                        </div>
+                        <a href="productDetails.html"><img src="	https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-04.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$32</strike>
+                            <h5>$22</h5>
+                        </div>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/trending-04.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$26</strike>
+                            <h5>$18</h5>
+                        </div>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/trending-04.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$45</strike>
+                            <h5>$30</h5>
+                        </div>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-03.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="images-down">
-                    <div class="images-prices">
-                        <strike class="strike">$32</strike>
-                        <h5>$22</h5>
-                    </div>
-                    <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/trending-04.jpg" width="300" height="225"></a>
-                    <div class="image-caption">
-                        <div>
-                            <p>Action</p>
-                            <h3>Assasin Creed</h3>
+            </div>
+            <div class="content" id="racing-images">
+                <div class="trending-games-images">
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$45</strike>
+                            <h5>$30</h5>
                         </div>
-                        <i class="fa-solid fa-bag-shopping"></i>
-                    </div>
-                </div>
-                <div class="images-down">
-                    <div class="images-prices">
-                        <strike class="strike">$38</strike>
-                        <h5>$26</h5>
-                    </div>
-                    <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-04.jpg" width="300" height="225"></a>
-                    <div class="image-caption">
-                        <div>
-                            <p>Action</p>
-                            <h3>Assasin Creed</h3>
+                        <a href="productDetails.html"><img src="	https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-04.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
                         </div>
-                        <i class="fa-solid fa-bag-shopping"></i>
                     </div>
-                </div>
-                <div class="images-down">
-                    <div class="images-prices">
-                        <strike class="strike">$30</strike>
-                        <h5>$20</h5>
-                    </div>
-                    <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-05.jpg" width="300" height="225"></a>
-                    <div class="image-caption">
-                        <div>
-                            <p>Action</p>
-                            <h3>Assasin Creed</h3>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$38</strike>
+                            <h5>$26</h5>
                         </div>
-                        <i class="fa-solid fa-bag-shopping"></i>
-                    </div>
-                </div>
-                <div class="images-down">
-                    <div class="images-prices">
-                        <strike class="strike">$32</strike>
-                        <h5>$22</h5>
-                    </div>
-                    <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/trending-04.jpg" width="300" height="225"></a>
-                    <div class="image-caption">
-                        <div>
-                            <p>Action</p>
-                            <h3>Assasin Creed</h3>
+                        <a href="productDetails.html"><img src="	https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-04.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
                         </div>
-                        <i class="fa-solid fa-bag-shopping"></i>
                     </div>
-                </div>
-                <div class="images-down">
-                    <div class="images-prices">
-                        <strike class="strike">$32</strike>
-                        <h5>$22</h5>
-                    </div>
-                    <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-03.jpg" width="300" height="225"></a>
-                    <div class="image-caption">
-                        <div>
-                            <p>Action</p>
-                            <h3>Assasin Creed</h3>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$30</strike>
+                            <h5>$20</h5>
                         </div>
-                        <i class="fa-solid fa-bag-shopping"></i>
-                    </div>
-                </div>
-                <div class="images-down">
-                    <div class="images-prices">
-                        <strike class="strike">$28</strike>
-                        <h5>$20</h5>
-                    </div>
-                    <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-04.jpg" width="300" height="225"></a>
-                    <div class="image-caption">
-                        <div>
-                            <p>Action</p>
-                            <h3>Assasin Creed</h3>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-05.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
                         </div>
-                        <i class="fa-solid fa-bag-shopping"></i>
                     </div>
-                </div>
-                <div class="images-down">
-                    <div class="images-prices">
-                        <strike class="strike">$26</strike>
-                        <h5>$18</h5>
-                    </div>
-                    <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/trending-04.jpg" width="300" height="225"></a>
-                    <div class="image-caption">
-                        <div>
-                            <p>Action</p>
-                            <h3>Assasin Creed</h3>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$32</strike>
+                            <h5>$22</h5>
                         </div>
-                        <i class="fa-solid fa-bag-shopping"></i>
-                    </div>
-                </div>
-                <div class="images-down">
-                    <div class="images-prices">
-                        <strike class="strike">$32</strike>
-                        <h5>$24</h5>
-                    </div>
-                    <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-05.jpg" width="300" height="225"></a>
-                    <div class="image-caption">
-                        <div>
-                            <p>Action</p>
-                            <h3>Assasin Creed</h3>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/trending-04.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
                         </div>
-                        <i class="fa-solid fa-bag-shopping"></i>
                     </div>
-                </div>
-                <div class="images-down">
-                    <div class="images-prices">
-                        <strike class="strike">$45</strike>
-                        <h5>$30</h5>
-                    </div>
-                    <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-03.jpg" width="300" height="225"></a>
-                    <div class="image-caption">
-                        <div>
-                            <p>Action</p>
-                            <h3>Assasin Creed</h3>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$32</strike>
+                            <h5>$22</h5>
                         </div>
-                        <i class="fa-solid fa-bag-shopping"></i>
+                        <a href="productDetails.html"><img src="https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-03.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                    <div class="images-down">
+                        <div class="images-prices">
+                            <strike class="strike">$28</strike>
+                            <h5>$20</h5>
+                        </div>
+                        <a href="productDetails.html"><img src="	https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/categories-04.jpg" width="300" height="225"></a>
+                        <div class="image-caption">
+                            <div>
+                                <p>Action</p>
+                                <h3>Assasin Creed</h3>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -221,5 +487,7 @@
     <footer>
         <p>Copyright © 2048 LUGX Gaming Company. All rights reserved. &nbsp; <a href="https://templatemo.com/" target="_blank"> Design: TemplateMo</a></p>
     </footer>
+    <script src="ourShop.js"></script>
 </body>
+
 </html>
