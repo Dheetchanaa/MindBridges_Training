@@ -2,11 +2,9 @@ function largest(){
     var text1 = document.getElementById("text1").value;
     var res1 = document.getElementById("res1");
     let arr = text1.split(" ");
-    let max = 0;
-    let word;
+    let word = "";
     for(let i=0;i<arr.length;i++){
-        if(arr[i].length>max){
-            max = arr[i].length;
+        if(arr[i].length>word.length){
             word = arr[i];
         }
     }
