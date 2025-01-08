@@ -41,12 +41,16 @@ function replaceEven(){
 function removeDup(){
     var text4 = document.getElementById("text4").value;
     var res4 = document.getElementById("res4");
-    res4.innerText="";
     let seen1 = new Set();
+    let ans = "";
     for(let i=0;i<text4.length;i++){
-        if(!seen1.has(text4.charAt(i))){
-            res4.innerText+= text4.charAt(i);
+        if(text4.charAt(i)==" "){
+            ans+= "  ";
+        }
+        else if(!seen1.has(text4.charAt(i))){
+            ans+=text4.charAt(i);
         }
         seen1.add(text4.charAt(i));
     }
+    res4.textContent = ans;
 }
