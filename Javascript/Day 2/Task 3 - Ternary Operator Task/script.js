@@ -1,8 +1,8 @@
-var num = document.getElementById("num");
-var res = document.getElementById("res");
+var num = document.getElementById("num0");
+var res = document.getElementById("res0");
 function find(){
-    res="";
+    res.innerText="";
     let value1 = num.value;
-    value1>=0?res.innerText="Positive":res.innerText="Negative";
+    res.innerText=value1>=0?"Positive":"Negative";
     console.log(value1>=0?"Positive":"Negative");
 }
