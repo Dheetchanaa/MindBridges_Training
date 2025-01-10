@@ -11,13 +11,13 @@ console.log(employees);
 
 //2.You are given an array of numbers. Write a function that groups the numbers into two categories: odd and even, and returns an object where the keys are "odd" and "even", and the values are arrays containing the respective numbers
 const nums = [1, 2, 3, 4, 5, 6];
-const res = [{odd:[]},{even:[]}];
+const res = {odd:[],even:[]};
 nums.forEach((index)=>{
     if(index%2==0){
-        res[1].even.push(index);
+        res.even.push(index);
     }
     else{
-        res[0].odd.push(index);
+        res.odd.push(index);
     }
 })
 console.log(res);
@@ -49,6 +49,7 @@ map.forEach((item,key)=>{
     }
 })
 console.log(maxKey);
+
 //5.Find common elements in two arrays.
 const arr1 = [1, 2, 3]; const arr2 = [2, 3, 4];
 let res2 = [];
@@ -89,6 +90,7 @@ arr5.forEach((item)=>{
     res4.push(item[0],item[1]);
 })
 console.log(res4);
+
 //9.Filter keys in an object.
 const obj1 = { a: 1, b: 2, c: 3 };
 const obj2 = {};
