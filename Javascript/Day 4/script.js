@@ -1,11 +1,13 @@
 //1.Given an array of objects representing employees, each object containing a name and age property, write a function that sorts the array by the age property in ascending order.
 const employees = [ 
-    { name: 'John', age: 28 }, 
-    { name: 'Anna', age: 22 }, 
-    { name: 'Mike', age: 32 },
+    { name: 'John', age: 28, id:1 }, 
+    { name: 'Anna', age: 22, id:5 }, 
+    { name: 'Mike', age: 32, id:3 },
      ];
-employees.sort((a,b)=>{
-    return a.age - b.age;
+employees.sort((a,b,c,d)=>{
+    console.log(c);//undefined
+    console.log(d);//undefined
+    return a.age;
 })   
 console.log(employees);
 
@@ -26,13 +28,21 @@ console.log(res);
 const data = [ { id: 1, name: 'A' }, { id: 2, name: 'B' }, { id: 1, name: 'C' }, ];
 let set = new Set();
 let res1 = [];
-data.forEach((item)=>{
+data.filter((item)=>{
     if(!set.has(item.id)){
         res1.push(item);
     }
     set.add(item.id);
 })
 console.log(res1);
+
+// const arr_2 =  [{ id: 1, name: 'A' }, { id: 2, name: 'B' }, { id: 1, name: 'C' }, ];
+// let result = [];
+// arr_2.filter(item => {
+//     if(!result.some(arr2_object => arr2_object.id == item.id))
+//         result.push(item);
+// })
+// console.log(result);
 
 //4.Find the most frequent element in an array.
 const arr = [1, 2, 2, 3, 3, 3];
@@ -111,3 +121,8 @@ combined.forEach((item)=>{
     set1.add(item);
 })
 console.log(set1);
+
+const num = [1,2,3,4,5,3,2,6];
+let result = [];
+num.filter((item)=>{ !result.includes(item)?result.push(item):"";})
+console.log(result);

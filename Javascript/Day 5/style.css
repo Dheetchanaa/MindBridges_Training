@@ -1,0 +1,13 @@
+.table1{
+    border-collapse: collapse;
+    text-align: left;
+    margin: 2%;
+}
+.table1 th{
+    text-transform: capitalize;
+    background-color: gainsboro;
+}
+.table1 th,td{
+    border: 1px solid black;
+    padding: 10px 100px 10px 10px;
+}
