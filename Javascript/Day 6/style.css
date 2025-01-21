@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 3%;
+}
+.container form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    padding: 20px 50px;
+    background-color: #61c39c;
+    color: white;
+}
+.container form h2{
+    text-align: center;
+}
+.container form h3{
+    text-decoration: underline;
+}
+.container form .input1{
+    padding: 20px;
+    width: 50%;
+    border: none;
+}
+.container form select{
+    padding: 20px;
+    width: 57%;
+}
+.container form button{
+    padding: 10px;
+    width: 30%;
+    margin-top: 5%;
+    margin-left: 35%;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.container table{
+    margin: auto;
+    background-color: white;
+}
+.tableSection h2{
+    background-color: white;
+}
+.tableSection table{
+    background-color: #61c39c;
+    color: white;
+    border-radius: 10px;
+}
+.tableSection thead{
+    border: 2px solid white;
+    border-radius: 20%;
+}
+.tableSection table, th, td{
+    border-collapse: collapse;
+    width: 20%;
+}
+.tableSection table th{
+    padding: 10px 30px;
+    border: 2px solid white;
+}
+.tableSection table td{
+    padding: 10px 10px;
+    border: 2px solid white;
+}
+.tableSection table .td1 button{
+    width: 60px;
+    height: 25px;
+    border-radius: 20px;
+    border: none;
+    margin: 5% 15%;
+    cursor: pointer;
+    font-weight: 600;
+}
+.tableSection table .td1 .edit{
+    background-color: #f7bb07;
+    color: white;
+}
+.tableSection table .td1 .delete{
+    background-color: #f73f3f;
+    color: white;
+}

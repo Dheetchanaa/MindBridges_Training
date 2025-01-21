@@ -86,7 +86,8 @@ header{
 .tableSection table td{
     background-color: white;
     padding: 10px 30px;
-    width: 90%;
+    width: 10%;
+    flex-wrap: wrap;
     border: 2px solid black;
     text-align: center;
 }

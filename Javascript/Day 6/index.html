@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student detais</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="container">
+        <section>
+            <form action="" id="form">
+                <h2>Student Details Form</h2>
+                <h3>Name:</h3> <input type="text" placeholder="Enter your name" class="input1" id="studname">
+                <div id="nameError"></div>
+                <h3>Age:</h3> <input type="number" placeholder="Enter your age" class="input1" id="studage">
+                <div id="ageError"></div>
+                <h3>Phone no:</h3> <input type="number" placeholder="Enter your phone no" class="input1" id="studphoneno">
+                <div id="phonenoError"></div>
+                <h3>Gender:</h3> <label for="gender">
+                    <input type="radio" name="gender" value="Male" id="male">Male
+                    <input type="radio" name="gender" value="Female" id="female">Female
+                </label>
+                <div id="genderError"></div>
+                <h3>Subjects:</h3> <label for="subjects">
+                    <input type="checkbox" name="subjects" value="Programming">Programming
+                    <input type="checkbox" name="subjects" value="Computer Networks">Computer Networks
+                    <input type="checkbox" name="subjects" value="Operating System">Operating System
+                    <input type="checkbox" name="subjects" value="Cybersecurity">Cybersecurity
+                </label>
+                <div id="subjectsError"></div>
+                <h3>DOB:</h3> <input type="date" class="input1" id="studdob">
+                <div id="DOBError"></div>
+                <h3>Location:</h3> <select name="location" id="studlocation">
+                    <option value="Chennai">Chennai</option>
+                    <option value="Coimbatore">Coimbatore</option>
+                    <option value="Namakkal">Namakkal</option>
+                    <option value="Erode">Erode</option>
+                </select>
+                <button type="button" onclick="formsubmit()" id="submitbtn">Submit</button>
+            </form>
+        </section>
+        <section class="tableSection">
+            <table id="table1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Phone no</th>
+                        <th>Gender</th>
+                        <th>Subjects</th>
+                        <th>DOB</th>
+                        <th>Location</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </section>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
