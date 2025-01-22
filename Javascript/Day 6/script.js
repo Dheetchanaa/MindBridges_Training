@@ -1,7 +1,6 @@
 var namePattern = /^[a-zA-Z][a-zA-Z\s]*[a-zA-Z]$/;
 var agePattern = /^[1-9]\d{0,1}$/;
 var phonePattern = /^\d{10}$/;
-var genderPattern = /^[Male/Female]$/;
 function validation(){
     var valid = true;
     var studname = document.getElementById("studname").value;
@@ -108,7 +107,7 @@ function deletefun(event){
     var deleteRow = deleteButton.parentElement.parentElement;
     deleteRow.remove();
 }
-let editRow = "";
+var editRow = "";
 function editfun(event){
     var editButton = event.target;
     editRow = editButton.parentElement.parentElement;
