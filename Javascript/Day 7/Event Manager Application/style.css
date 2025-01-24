@@ -1,0 +1,73 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+header{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px 0px;
+}
+.container form{
+    border: 1px solid gainsboro;
+    border-radius: 20px;
+    padding: 40px;
+    width: 40%;
+}
+.container .table1{
+    width: 55%;
+}
+.container .table1 thead tr th, .table1 tbody tr td {
+    padding: 10px;
+    text-align: center;
+}
+.left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 12%;
+}
+.actions{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.actions button{
+    width: 35%;
+    font-weight: 700;
+}
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 65%;
+}
+.table_container1{
+    width: 100%;
+    padding: 0% 5%;
+    display: none;
+}
+.table_container1 .table2{
+    text-align: center;
+    width: 50%;
+}
+.table_container1 .table2 thead tr, .table2 tbody tr {
+    text-align: center;
+}
+.table_container2{
+    width: 100%;
+    padding: 0% 5%;
+    display: none;
+}
+.table_container2 .table3{
+    text-align: center;
+    width: 50%;
+}
+.table_container2 .table3 thead tr, .table3 tbody tr {
+    text-align: center;
+}

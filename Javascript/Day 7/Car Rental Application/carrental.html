@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="carrental.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Home page -->
+    <section class="homePage" id="homePage">
+        <header>
+            <div>
+                <h4>Car Rental</h4>
+                <button type="button" class="btn btn-success" onclick="gotoadmin()">Admin</button>
+            </div>
+        </header>
+        <div class="homePage_inner">
+            <h1>Welcome to car rental platform</h1>
+            <h3>Here are the available cars</h3>
+            <div id="available_cars" class="available_cars"></div>
+        </div>
+    </section>
+    <section class="adminPage" id="adminPage">
+        <header>
+            <h3>Admin Panel - Manage Cars</h3>
+        </header>
+            <div class="form-container">
+                <form id="form" class="form">
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Model</label>
+                      <input type="text" class="form-control" placeholder="Enter car model" id="model">
+                      <div id="modelError"></div>
+                    </div><br>
+                    <div class="form-floating">
+                        Desciption<br>
+                        <textarea class="form-control" id="floatingTextarea"></textarea>
+                        <br>
+                        <div id="descriptionError"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Price per day</label>
+                        <input type="number" class="form-control" placeholder="Enter car price per day" id="price">
+                        <div id="priceError"></div>
+                      </div>
+                    <div class="button">
+                      <button type="button" class="btn btn-success" onclick="addCar()">Add car</button>
+                    </div>
+                  </form>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Model</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Price per day</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+              </table>
+              <div class="adminpageFooter">
+                <button type="button" class="btn btn-success gotohomepage" onclick="gotohomepage()">Home page</button>
+                <button type="button" class="btn btn-success addtoavaiable" id="addtoavailable" onclick="addtoavailable()">Add to available cars</button>
+              </div>
+    </section>
+    <!-- Booking page -->
+     <section class="bookingPage" id="bookingPage">
+      <h2>Booking page</h2>
+      <h4>Car Detail</h4><br>
+      <div id="car_details">
+      </div>
+      <form id="bookingForm" class="bookingForm">
+        <div>
+          <h6>Starting date</h6>
+        <input type="date" id="startdate">
+        <div id="startDateError"></div>
+        </div>
+        <div><h6>Ending date</h6>
+          <input type="date" id="enddate"></div>
+          <div id="endDateError"></div>
+        <button type="button" class="btn btn-success" onclick="bookcarnow()">Book</button>
+      </form>
+      <div id="bookingresult" class="bookingresult"></div>
+      <button type="button" class="btn btn-success" onclick="gotohomepage()">Back to home</button>
+     </section>
+    <script src="carrental.js"></script>
+</body>
+</html>

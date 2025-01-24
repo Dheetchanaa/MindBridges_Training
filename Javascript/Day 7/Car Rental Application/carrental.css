@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.homePage header {
+    background-color: #18ca88;
+    color: white;
+    padding: 20px;
+}
+.homePage header div {
+    display: flex;
+    justify-content: space-between;
+}
+.homePage_inner {
+    padding: 60px;
+}
+.available_cars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+}
+.available_cars .car_container {
+    width: 30%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #c6cbd0;
+    background-color: #f8f9fa;
+}
+.car_container .bookbtn{
+    border-radius: 20px;
+    font-weight: 600;
+}
+/* admin page */
+.adminPage{
+    display: none;
+    padding: 20px;
+}
+.adminPage header{
+    text-align: center;
+}
+.adminPage .form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.adminPage form{
+    width: 50%;
+}
+.adminPage .table{
+    width: 70%;
+    margin-top: 2%;
+    margin-left: 15%;
+    border-radius: 20px;
+}
+.adminPage .table thead tr th, .table tbody tr td {
+    padding: 10px;
+    text-align: center;
+}
+.adminpageFooter{
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 15%;
+}
+/* booking page */
+.bookingPage{
+    display: none;
+    padding: 20px;
+}
+.bookingPage .center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bookingPage h2{
+    text-align: center;
+}
+.bookingForm{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 30%;
+    height: 25vh;
+}
+.bookingForm button{
+    width: 25%;
+}
+.bookingresult{
+    margin-top: 5%;
+}
