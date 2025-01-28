@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager with Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Task Manager with Timer</h1>
+    
+    <form id="taskForm">
+      <input type="text" id="taskTitle" placeholder="Task Title" required>
+      <textarea id="taskDescription" placeholder="Task Description" required></textarea>
+      <input type="datetime-local" id="taskEstimateTime" required>
+      <button type="submit">Add Task</button>
+    </form>
+    
+    <div id="taskList"></div>
+    
+    <div id="completionSummary"></div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

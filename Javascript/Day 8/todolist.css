@@ -1,0 +1,92 @@
+.main-container{
+    background-color: #b9eaf4;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-container{
+    background-color: white;
+    width: 60%;
+    height: 80%;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-container form{
+    border: 1px solid gainsboro;
+    padding: 20px;
+    width: 50%;
+    border-radius: 10px;
+}
+.form-container form button{
+    margin-left: 30%;
+}
+.list-container{
+    display: none;
+    background-color: white;
+    width: 60%;
+    height: 80%;
+    border-radius: 10px;
+    padding: 20px;
+    overflow: scroll;
+}
+.list-container .list-container-header{
+    display: flex;
+    justify-content: space-between;
+}
+.list-container .list-container-header i{
+    color: #3bc9e5;
+    font-size: 20px;
+    cursor: pointer;
+}
+.list-container .list-container-subheader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.list-container .list-container-subheader .list-container-subheader1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.list-container .list-items{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.list-items-container{
+    border-radius: 10px;
+    padding: 10px;
+    width: 32%;
+}
+.list-items-container:nth-child(odd) {
+    background-color: #c8f0c3;
+}
+.list-items-container:nth-child(even) {
+    background-color: #f8e8a2;
+}
+.list-items-container .list-items-container-header{
+    display: flex;
+    justify-content: space-between;
+}
+.list-items-container .list-items-container-header p{
+    color: red;
+}
+.list-items-container .container-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.list-items-container .container-buttons .button1{
+    width: 38%;
+}
+.list-items-container .container-buttons .button2{
+    width: 37%;
+}

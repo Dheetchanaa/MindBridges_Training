@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do list</title>
+    <link rel="stylesheet" href="todolist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <section class="main-container">
+    <section class="form-container" id="form-container">
+    <h1>Just do it</h1><br>
+    <form id="form">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Task Title: </label>
+          <input type="email" class="form-control" id="taskTitle" placeholder="Enter task title">
+          <div id="taskTitleError"></div>
+        </div><br>
+        <div class="form-floating">
+            Task Desciption:<br>
+            <textarea class="form-control" id="floatingTextarea"></textarea>
+            <br>
+            <div id="taskDescriptionError"></div>
+        </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Task Estimate Time: </label>
+            <input type="datetime-local" class="form-control" id="taskEstimateTime">
+            <div id="taskDateError"></div>
+          </div>              
+        <div class="button">
+          <button type="button" class="btn btn-primary" onclick="addtodo()" id="addbtn">Add a new todo</button>
+        </div>
+      </form>
+    </section>
+    <section class="list-container" id="list-container">
+        <div class="list-container-header">
+            <h3>Todo List</h3>
+            <i class="fa-solid fa-plus" onclick="gotohome()"></i>
+        </div>
+        <div class="list-container-subheader">
+          <div><p id="total_points_full">Total points: <span id="total_score"></span></p></div>
+          <div class="list-container-subheader1">
+            <div class="dropdown">
+              <button class="btn btn-warning dropdown-toggle" id="statusbtnname" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Filter by status
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item status-dropdown" name="Mark as complete">Mark as complete</a></li>
+                <li><a class="dropdown-item status-dropdown" name="Completed">Completed</a></li>
+                <li><a class="dropdown-item status-dropdown" name="Failed">Failed</a></li>
+                <li><a class="dropdown-item status-dropdown" name="All status">All status</a></li>
+              </ul>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-success dropdown-toggle" id="timelinebtnname" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Filter by timeline
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item timeline-dropdown" name="Last one week">Last one week</a></li>
+                <li><a class="dropdown-item timeline-dropdown" name="Last one month">Last one month</a></li>
+                <li><a class="dropdown-item timeline-dropdown" name="Last six months">Last six months</a></li>
+                <li><a class="dropdown-item timeline-dropdown" name="Last one year">Last one year</a></li>
+                <li><a class="dropdown-item timeline-dropdown" name="All time">All time</a></li>
+              </ul>
+            </div>
+        </div>
+        </div><br>
+        <div class="list-items" id="list-items">
+        </div>
+    </section>
+    </section>
+    <script src="todolist.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
