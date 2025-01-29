@@ -33,6 +33,10 @@
     height: 500px;
     width: 100%;
     object-fit: contain;
+    transition: 0.5s ease-in-out;
+}
+.mainContainer .image-container img:hover{
+    scale: 1.05;
 }
 .mainContainer .content-container{
     margin: 4% 0%;
