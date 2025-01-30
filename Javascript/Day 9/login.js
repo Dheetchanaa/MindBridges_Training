@@ -1,5 +1,5 @@
 var namePattern = /^[a-zA-Z][a-zA-Z\s]*[a-zA-Z]$/;
-var emailPattern = /[a-zA-Z0-9_\.\-]+[@][a-z]+[\.]+[a-z]/
+var emailPattern = /^[a-zA-Z]+[a-zA-Z0-9_\.\-]+[@][a-z]+[\.]+[a-z]/
 function validation(){
     let valid = true;
     var name = document.getElementById("username").value;
