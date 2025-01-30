@@ -172,8 +172,8 @@ function searchExpense(){
         if(rowSearch.toLowerCase().includes(searchText.toLowerCase())){
             row.style.display = "";
             filterPrize+=parseFloat(row.cells[1].innerText);
-            lastCell.style.display = "none";
-            headLastCell.style.display = "none"
+            lastCell.style.display = "";
+            headLastCell.style.display = ""
         }else{
             row.style.display = "none";
             lastCell.style.display = "";
