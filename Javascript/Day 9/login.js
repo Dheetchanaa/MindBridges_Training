@@ -1,16 +1,17 @@
 var namePattern = /^[a-zA-Z][a-zA-Z\s]*[a-zA-Z]$/;
-var emailPattern = /^[a-zA-Z]+[a-zA-Z0-9_\.\-]+[@][a-z]+[\.]+[a-z]/
+var emailPattern = /^[a-zA-Z]+[\w_\.\-]+[@][a-z]+[\.]+[a-z]/
+
 function validation(){
     let valid = true;
     var name = document.getElementById("username").value;
     var email = document.getElementById("email").value;
     if(!namePattern.test(name)){
         valid=false;
-        document.getElementById("nameError").innerText = "Please enter your name";
-        document.getElementById("nameError").style.color = "red";
+        document.getElementById("passwordError").innerText = "Please enter valid name";
+        document.getElementById("passwordError").style.color = "red";
     }
     else{
-        document.getElementById("nameError").innerText = "";
+        document.getElementById("passwordError").innerText = "";
     }
     if(!emailPattern.test(email)){
         valid=false;

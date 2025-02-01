@@ -1,0 +1,35 @@
+.table1{
+    width: 100%;
+    border-left: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+}
+.table1 thead tr{
+    background-color: #674187;
+    color: white;
+    border-radius: 20px;
+}
+.table1 thead tr th{
+    padding: 20px 10px;
+    font-weight: 500;
+}
+.table1 thead th:first-child {
+    border-top-left-radius: 5px;
+}
+
+.table1 thead th:last-child {
+    border-top-right-radius: 5px;
+}
+.table1 tbody tr{
+    border: 1px solid gainsboro;
+}
+.table1 tbody tr td{
+    padding: 10px;
+}
+.table1 tbody tr:nth-child(even){
+    background-color: #e1bfd9;
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
