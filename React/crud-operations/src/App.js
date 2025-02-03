@@ -1,200 +1,152 @@
 import logo from './logo.svg';
 import './App.css';
-import Table from './Table';
-import { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import Table from './table.js';
 function App() {
-  var namePattern = /^[a-zA-Z][a-zA-Z\s]*[a-zA-Z]$/;
-  var agePattern = /^[1-9]\d{0,1}$/;
-  const [tablerow, setTablerow] = useState([]);
-  const [iseditting , setIseditting] = useState(false);
-  const [rowIndex, setRowIndex] = useState(null);
-  function validation(){
-    var valid = true;
-    var studname = document.getElementById("studname").value;
-    if (!namePattern.test(studname)) {
-      valid = false;
-      document.getElementById("nameError").innerText = "Name should contain only letters and spaces!"
-      document.getElementById("nameError").style.color = "red";
+  const formref = useRef(null);
+  const [user, setUser] = useState({
+    studname: '',
+    studage: '',
+    gender: '',
+    subjects: new Set(),
+    studdob: '',
+    studlocation: 'Chennai'
+  })
+  const [formErrors, setErrors] = useState({
+    nameError: '',
+    ageError: '',
+    genderError: '',
+    subjectsError: '',
+    dobError: '',
+    locationError: ''
+  });
+  const [tableUser, setTableUser] = useState([]);
+  const [isEditting, setIseditting] = useState(false);
+  const [editRowIndex, setEditRowIndex] = useState(null);
+  const [submitbtn, setSubmitbtn] = useState('Submit');
+  const validateForm = () => {
+    let formErrors = {};
+    let isValid = true;
+    if(user.studname == ''){
+      isValid = false
+      formErrors.studname = "Name is required";
     }
-    else {
-      document.getElementById("nameError").innerText = "";
+    if(user.studage == ''){
+      isValid = false
+      formErrors.studage = "Age is required";
     }
-    var studage = document.getElementById("studage").value;
-    if (!agePattern.test(studage)) {
-      valid = false;
-      document.getElementById("ageError").innerText = "Age should be between 1-99!";
-      document.getElementById("ageError").style.color = "red";
+    if(user.gender == ''){
+      isValid = false
+      formErrors.gender = "Gender is required";
     }
-    else {
-      document.getElementById("ageError").innerText = "";
+    if(user.subjects.size === 0){
+      isValid = false
+      formErrors.subjects = "At least one subject is required";
     }
-    var studgender = "";
-    if (document.getElementById("male").checked) {
-      studgender = "Male";
+    if(user.studdob == ''){
+      isValid = false
+      formErrors.studdob = "Date of Birth is required";
     }
-    else if (document.getElementById("female").checked) {
-      studgender = "Female";
-    }
-    if (studgender == "") {
-      valid = false;
-      document.getElementById("genderError").innerText = "Please select your gender";
-      document.getElementById("genderError").style.color = "red";
-    }
-    else {
-      document.getElementById("genderError").innerText = "";
-    }
-    var studsubjects = document.getElementsByName("subjects");
-    var checkedsubjects = [];
-    for (let i of studsubjects) {
-      if (i.checked) {
-        checkedsubjects.push(i.value);
-      }
-    }
-    if (checkedsubjects.length == 0) {
-      valid = false;
-      document.getElementById("subjectsError").innerText = "Please select atleast one subject";
-      document.getElementById("subjectsError").style.color = "red";
-    }
-    else {
-      document.getElementById("subjectsError").innerText = "";
-    }
-    var studdob = document.getElementById("studdob").value;
-    if (studdob == "") {
-      valid = false;
-      document.getElementById("DOBError").innerText = "Please select your date of birth";
-      document.getElementById("DOBError").style.color = "red";
-    }
-    else {
-      document.getElementById("DOBError").innerText = "";
-    }
-    return valid;
+    setErrors(formErrors);
+    return isValid;
   }
-  const handleClick = () =>{
-    if(validation()){
-      var studname = document.getElementById("studname").value;
-      var studage = document.getElementById("studage").value;
-      var studgender = "";
-      if (document.getElementById("male").checked) {
-        studgender = "Male";
-      }
-      else if (document.getElementById("female").checked) {
-        studgender = "Female";
-      }
-      var studsubjects = document.getElementsByName("subjects");
-      var checkedsubjects = [];
-      for (let i of studsubjects) {
-        if (i.checked) {
-          checkedsubjects.push(i.value);
+  const addUser = (e) => {
+      setUser((previous) => {
+        if(e.target.type !== 'checkbox'){
+          return {
+            ...previous,[e.target.name]: e.target.value
+          };
         }
-      }
-      var studdob = document.getElementById("studdob").value;
-      var studlocation = document.getElementById("studlocation").value;
-      const newRow = [studname, studage, studgender, checkedsubjects, studdob, studlocation]
-      if(!iseditting){
-        setTablerow([...tablerow, newRow]);
-        console.log(tablerow);
-      }
-      else{
-        const UpdateRow = [...tablerow];
-        UpdateRow[rowIndex] = newRow;
-        setTablerow(UpdateRow);
-        setRowIndex(null);
-        document.getElementById("submitbtn").innerText = "Submit";
-        document.getElementById("submitbtn").classList.remove("btn-light")
-        document.getElementById("submitbtn").classList.add("btn-primary");
-      }
-      handlereset();
+        else{
+          let checkedSubjects = new Set(previous[e.target.name]||[]);
+          if(e.target.checked){
+            checkedSubjects.add(e.target.value);
+          }
+          else{
+            checkedSubjects.delete(e.target.value);
+          }
+          return{
+            ...previous,[e.target.name]:checkedSubjects
+          }
+        }
+      });
+  }  
+  const handleSubmit = ()=>{
+    if(validateForm()){
+      setTableUser((previous)=>{
+        if(!isEditting){
+          setTableUser([...previous,user]);
+        }
+        else{
+          const updatedTableUser = [...previous];
+          updatedTableUser[editRowIndex] = user;
+          setTableUser(updatedTableUser);
+          setIseditting(false);
+          setSubmitbtn('Submit')
+        }
+        setUser({
+          studname: '',
+          studage: '',
+          gender: '',
+          subjects: new Set(),
+          studdob: '',
+          studlocation: 'Chennai'
+        });
+        formref.current.reset();
+      })
     }
   }
-  function handleDelete(e) {
-    e.target.parentElement.parentElement.parentElement.remove();
-  }
-  var editRow = null;
-  function handleEdit(e,index) {
+  const handleEdit = (e,index)=>{
+    setSubmitbtn('Update');
+    const editUser = tableUser[index];
     setIseditting(true);
-    editRow = e.target.parentElement.parentElement.parentElement;
-    setRowIndex(index);
-    var editCells = editRow.getElementsByTagName("td");
-    document.getElementById("studname").value = editCells[0].innerText;
-    document.getElementById("studage").value = editCells[1].innerText;
-    var gender = editCells[2].innerText;
-    if (gender == "Male") {
-      document.getElementById("male").checked = true;
-    }
-    else {
-      document.getElementById("female").checked = true;
-    }
-    var subjects = editCells[3].innerText.split(", ");
-    var studsubjects = document.getElementsByName("subjects");
-    console.log(studsubjects)
-    for (let i = 0; i < studsubjects.length; i++) {
-      if (subjects.includes(studsubjects[i].value)) {
-        studsubjects[i].checked = true;
-      } else {
-        studsubjects[i].checked = false;
-      }
-    }
-    document.getElementById("studdob").value = editCells[4].innerText;
-    document.getElementById("studlocation").value = editCells[5].innerText;
-    document.getElementById("submitbtn").innerText = "Update";
-    document.getElementById("submitbtn").classList.add("btn-light")
-        document.getElementById("submitbtn").classList.remove("btn-primary");
+    setUser({...editUser});
+    setEditRowIndex(index);
   }
-  const handlereset = ()=>{
-    document.getElementById("studname").value = "";
-    document.getElementById("studage").value = "";
-    document.getElementById("male").checked = false;
-    document.getElementById("female").checked = false;
-    var studsubjects = document.getElementsByName("subjects");
-    for (let i of studsubjects) {
-      i.checked = false;
-    }
-    document.getElementById("studdob").value = "";
-    document.getElementById("studlocation").value = "Chennai";
+  const handleDelete = (e,index)=>{
+    const updatedTableUser = tableUser.filter((item,i)=>i!=index);
+    setTableUser(updatedTableUser);
   }
   return (
     <div className="main-container">
       <div className="form" id='form'>
         <h3>Student Details Form</h3>
-        <form>
-          <div class="mb-3">
-            <label htmlFor="exampleInputEmail1" class="form-label">Name</label>
-            <input type="text" class="form-control" placeholder="Enter your name" aria-label="Username" aria-describedby="basic-addon1" id="studname"></input>
-            <div id="nameError"></div>
+        <form ref={formref}>
+          <div className="mb-3">
+            <label htmlFor="exampleInputEmail1" className="form-label">Name</label>
+            <input type="text" className="form-control" placeholder="Enter your name" aria-label="Username" aria-describedby="basic-addon1" name="studname" value={user.studname||''} onChange={addUser}></input>
+            <div className='Errors'>{formErrors.studname}</div>
           </div>
-          <div class="mb-3">
-            <label htmlFor="exampleInputEmail1" class="form-label">Age</label>
-            <input type="number" class="form-control" placeholder="Enter your age" id="studage" aria-describedby="emailHelp"></input>
-            <div id="ageError"></div>
+          <div className="mb-3">
+            <label htmlFor="exampleInputEmail1" className="form-label">Age</label>
+            <input type="number" className="form-control" placeholder="Enter your age" name="studage" value={user.studage||''} aria-describedby="emailHelp" onChange={addUser}></input>
+            <div className='Errors'>{formErrors.studage}</div>
           </div>
-          <p>Gender:</p> <label for="gender">
-            <input type="radio" name="gender" value="Male" id="male"></input>Male {'\u00A0'}{'\u00A0'}
-            <input type="radio" name="gender" value="Female" id="female"></input>Female
+          <p>Gender:</p> <label htmlFor="gender">
+            <input type="radio" name="gender" value="Male" checked={user.gender=='Male'||false} onChange={addUser}></input>Male {'\u00A0'}{'\u00A0'}
+            <input type="radio" name="gender" value="Female" checked={user.gender=='Female'||false} onChange={addUser}></input>Female
           </label>
-          <div id="genderError"></div><br></br>
-          <p>Subjects:</p> <label for="subjects">
-            <input type="checkbox" name="subjects" value="Programming"></input>Programming{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}
-            <input type="checkbox" name="subjects" value="Computer Networks"></input>Computer Networks{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}
-            <input type="checkbox" name="subjects" value="Operating System"></input>Operating System{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}
-            <input type="checkbox" name="subjects" value="Cybersecurity"></input>Cybersecurity<br></br><br></br>
+          <div className='Errors'>{formErrors.gender}</div><br></br>
+          <p>Subjects:</p> <label htmlFor="subjects">
+            <input type="checkbox" name="subjects" value='Programming' checked={user.subjects&&user.subjects.has('Programming')||false} onChange={addUser}></input>Programming{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}
+            <input type="checkbox" name="subjects" value='Computer Networks' checked={user.subjects&&user.subjects.has('Computer Networks')||false} onChange={addUser}></input>Computer Networks{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}
+            <input type="checkbox" name="subjects" value='Operating System' checked={user.subjects&&user.subjects.has('Operating System')||false} onChange={addUser}></input>Operating System{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}
+            <input type="checkbox" name="subjects" value='Cybersecurity' checked={user.subjects&&user.subjects.has('Cybersecurity')||false} onChange={addUser}></input>Cybersecurity<br></br><br></br>
           </label>
-          <div id="subjectsError"></div>
-          <p>DOB:</p> <input type="date" class="input1" id="studdob"></input>
-          <div id="DOBError"></div><br></br>
+          <div className='Errors'>{formErrors.subjects}</div>
+          <p>DOB:</p> <input type="date" className="input1" name="studdob" onChange={addUser} value={user.studdob||''}></input>
+          <div className='Errors'>{formErrors.studdob}</div><br></br>
           <p>Location:</p>
-          <select class="form-select" aria-label="Default select example" id="studlocation">
-            <option selected value="Chennai">Chennai</option>
+          <select className="form-select" aria-label="Default select example" name="studlocation" value={user.studlocation} onChange={addUser}>
+            <option value="Chennai">Chennai</option>
             <option value="Coimbatore">Coimbatore</option>
             <option value="Erode">Erode</option>
             <option value="Namakkal">Namakkal</option>
           </select><br></br>
-          <button type="button" class="btn btn-primary" id="submitbtn" onClick={handleClick}>Submit</button>
+          <button type="button" className="btn btn-primary" name='submitbtn' onClick={handleSubmit}>{submitbtn}</button>
         </form>
       </div>
-      <div class="table">
-      <h3>Student Records</h3>
-      <Table tablerow={tablerow} handleDelete={handleDelete} handleEdit={handleEdit} />
-      </div>
+        <Table tablerow={tableUser} handleEdit={handleEdit} handleDelete={handleDelete}/>
     </div>
   );
 }
