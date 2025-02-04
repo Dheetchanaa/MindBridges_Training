@@ -16,7 +16,7 @@ const Cart = () => {
     setCart((prevCart) => {
       const updatedCart = prevCart.filter(item => item !== id); 
       setCart(updatedCart);
-      setPrice((price-price1).toFixed(2));
+      setPrice((Number(price)-Number(price1)).toFixed(2));
       setCartCount(cartCount-1);
     });
   };

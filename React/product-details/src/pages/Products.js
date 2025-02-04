@@ -22,7 +22,7 @@ const Products = () => {
           return updatedCart;
         });
         setCartCount(prevCount => prevCount + 1);
-        setPrice(prevPrice => prevPrice + price1);
+        setPrice((Number(price)+Number(price1)).toFixed(2));
         setIsAdded(true);
       }
     };    
