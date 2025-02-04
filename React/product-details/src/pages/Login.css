@@ -1,0 +1,37 @@
+.allContainer{
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+.maincontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.maincontainer .loginContainer{
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    border: 2px solid #fdb8b2;
+}
+.maincontainer .loginContainer .form-control{
+    border-radius: 5px;
+    padding: 12px;
+}
+.maincontainer .loginContainer .btn-primary{
+    width: 100%;
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.maincontainer .loginContainer .btn-primary:hover{
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+}
+.Errors{
+    color: red;
+}

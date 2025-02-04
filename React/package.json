@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "web-vitals": "^4.2.4"
+  },
+  "devDependencies": {
+    "react-router-dom": "^7.1.5"
   }
 }
