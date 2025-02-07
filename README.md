@@ -13,6 +13,9 @@
 </ul>
 <h4>Javascript</h4>
 <ul>
+  <li>Online Quiz Application</li>
+  <li>Car Rental Application</li>
+  <li>Event Management Application<li>
   <li>Product Details</li>
 </ul>
 <h4>React JS</h4>
