@@ -12,3 +12,11 @@
   <li>Day2 - LUGX Gaming Website</li>
 </ul>
 <h4>Javascript</h4>
+<ul>
+  <li>Product Details</li>
+</ul>
+<h4>React JS</h4>
+<ul>
+  <li>Crud operation</li>
+  <li>Product Details</li>
+</ul>
