@@ -15,8 +15,10 @@
 <ul>
   <li>Online Quiz Application</li>
   <li>Car Rental Application</li>
-  <li>Event Management Application<li>
-  <li>Product Details</li>
+  <li>Event Management Application</li>
+  <li>Expense Tracker</li>
+  <li>To-Do List</li>
+  <li>Observable Concept</li>
 </ul>
 <h4>React JS</h4>
 <ul>
