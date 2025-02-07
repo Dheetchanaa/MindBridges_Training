@@ -22,6 +22,6 @@
 </ul>
 <h4>React JS</h4>
 <ul>
-  <li>Crud operation</li>
+  <li>Crud Operation</li>
   <li>Product Details</li>
 </ul>
