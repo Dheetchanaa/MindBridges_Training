@@ -1,6 +1,17 @@
 .allContainer{
     background-color: #f4f4f4;
 }
+.allContainer .cartIcon{
+    display: flex;
+    align-items: flex-start;
+    padding-top: 10px;
+    font-size: 20px;
+}
+.cart-header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 header{
     background: linear-gradient(90deg, #ff6a00, #ee0979);
     padding: 20px;
@@ -24,11 +35,10 @@ header .btn-warning:hover{
     font-weight: 600;
 }
 .mainContainer{
-    background-color: #f4f4f4;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    height: 200vh;
+    min-height: 100vh;
     gap: 20px;
     padding: 60px;
 }

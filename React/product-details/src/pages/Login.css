@@ -1,15 +1,15 @@
-.allContainer{
-    height: 100vh;
+.allContainers{
     background-color: #f4f4f4;
+    height: 100vh;
 }
-.maincontainer{
+.maincontainers{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 80vh;
 }
-.maincontainer .loginContainer{
+.maincontainers .loginContainer{
     background: #ffffff;
     padding: 40px;
     border-radius: 10px;
@@ -17,11 +17,11 @@
     width: 350px;
     border: 2px solid #fdb8b2;
 }
-.maincontainer .loginContainer .form-control{
+.maincontainers .loginContainer .form-control{
     border-radius: 5px;
     padding: 12px;
 }
-.maincontainer .loginContainer .btn-primary{
+.maincontainers .loginContainer .btn-primary{
     width: 100%;
     background: linear-gradient(90deg, #ff6a00, #ee0979);
     border: none;
@@ -29,7 +29,7 @@
     border-radius: 5px;
     font-size: 16px;
 }
-.maincontainer .loginContainer .btn-primary:hover{
+.maincontainers .loginContainer .btn-primary:hover{
     background: linear-gradient(90deg, #ff6a00, #ee0979);
 }
 .Errors{
