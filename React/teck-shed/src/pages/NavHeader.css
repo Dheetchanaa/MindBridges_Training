@@ -1,0 +1,24 @@
+.navHeader{
+    padding: 0px;
+    height: 20px;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+.navHeader a{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    font-size: 14px;
+}
+.navHeader a:hover{
+    color: #751fff;
+}
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+.nav-link.active,
+.dropdown-item.active {
+  color: #751fff !important;
+  background-color: transparent !important;
+}

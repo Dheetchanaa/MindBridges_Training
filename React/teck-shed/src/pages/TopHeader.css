@@ -1,0 +1,19 @@
+.collapse{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 20px 20px 20px;
+}
+.logo-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 19%;
+}
+.nav-link{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.topHeaderFull{
+    background-color: black !important;
+}

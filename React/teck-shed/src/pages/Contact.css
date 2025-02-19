@@ -1,0 +1,74 @@
+.contact-main-container{
+    background-color: white;
+    padding-top: 100px;
+}
+.contact-main-container h1{
+    color: black;
+    text-align: center;
+}
+.contact-div-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 30px;
+}
+.contact-div-container div{
+    padding-top: 80px;
+    width: 40%;
+    line-height: 2;
+}
+.contact-div-container img{
+    width: 50%;
+}
+.careers-inputs-main-container{
+    padding: 30px;
+    width: 60%;
+}
+.careers-container-inputs{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+.careers-container-inputs label{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10vh;
+    margin-top: 40px;
+}
+.careers-container-inputs input{
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+.careers-container-inputs button{
+    padding: 10px;
+    width: 200px;
+    background-color: #751fff;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    margin-top: 70px;
+}
+.careers-container-inputs button:hover{
+    background-color: transparent;
+    color: #751fff;
+    border: 1px solid #751fff;
+}
+.careers-container-inputs select{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+.careers-container-inputs select:hover{
+    border: 1px solid black;
+}
+.errors{
+    color: red;
+}

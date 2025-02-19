@@ -1,0 +1,39 @@
+.sidebarMain {
+    background-color: #e8e8e8;
+    padding: 15px;
+    width: 250px;
+    text-align: left;
+}
+.sidebarMain h4,hr{
+    margin-left: 12%;
+}
+.sidebarContainer {
+    padding: 0;
+}
+.sideBarNav {
+    list-style: none;
+    padding-left: 0;
+    display: block;
+}
+.sideBarNav .nav-link{
+    text-decoration: none;
+}
+.sideBarNav .nav-link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.sideBarNav .nav-link.active {
+    font-weight: bolder;
+    color: black !important;
+}
+.navbar {
+    background: none !important;
+    box-shadow: none;
+    border: none;
+}
+.navbar-expand-lg {
+    padding: 0 !important;
+}
+.navbar-collapse {
+    border: none;
+}
